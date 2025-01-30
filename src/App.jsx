@@ -1,5 +1,7 @@
+import Landing from "./pages/Landing";
+
 const App = () => {
-  return <div className="flex items-center justify-center">App</div>;
+  return <Landing />;
 };
 
 export default App;
