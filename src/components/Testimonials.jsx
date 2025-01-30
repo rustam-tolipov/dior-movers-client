@@ -18,7 +18,7 @@ const Testimonials = () => {
           </h1>
         </div>
         <div className="grid h-full w-3/5 grid-cols-2 gap-16 p-10">
-          <div className="flex h-full w-full flex-col justify-between">
+          <div className="flex h-full w-full flex-col gap-4 justify-between">
             {/* img */}
             <img
               src="/assets/user1.jpg"
@@ -34,7 +34,7 @@ const Testimonials = () => {
             {/* fullname */}
             <span className="text-red-600">- Lee Sims</span>
           </div>
-          <div className="flex h-full w-full flex-col justify-between">
+          <div className="flex h-full w-full flex-col gap-4 justify-between">
             {/* img */}
             <img
               src="/assets/user2.jpg"
@@ -50,7 +50,7 @@ const Testimonials = () => {
             {/* fullname */}
             <span className="text-red-600">- Lee Sims</span>
           </div>
-          <div className="flex h-full w-full flex-col justify-between">
+          <div className="flex h-full w-full flex-col gap-4 justify-between">
             {/* img */}
             <img
               src="/assets/user3.jpg"
@@ -66,7 +66,7 @@ const Testimonials = () => {
             {/* fullname */}
             <span className="text-red-600">- Lee Sims</span>
           </div>
-          <div className="flex h-full w-full flex-col justify-between">
+          <div className="flex h-full w-full flex-col gap-4 justify-between">
             {/* img */}
             <img
               src="/assets/user4.jpg"
