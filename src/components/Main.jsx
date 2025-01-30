@@ -1,0 +1,34 @@
+import React from "react";
+
+const Main = () => {
+  return (
+    <div className="container flex h-full w-full">
+      <div className="flex w-full flex-col justify-center gap-10 pb-14">
+        <h1 className="text-6xl font-bold tracking-normal text-gray-100">
+          Make your moving <br /> eathy with us
+        </h1>
+        <p className="w-11/12 text-2xl leading-8 tracking-wide text-gray-100">
+          It is a long established fact that the readable content of a page
+          when. Many desktop publishing packages and web page editors now use
+        </p>
+        <div className="flex items-center gap-6">
+          <button className="rounded-full bg-gray-950 px-8 py-2 text-xl font-medium text-gray-100">
+            Contact Us
+          </button>
+          <button className="rounded-full bg-red-50 px-8 py-2 text-xl font-medium text-gray-900">
+            Learn More
+          </button>
+        </div>
+      </div>
+      <div className="flex w-full items-center justify-center">
+        <img
+          src="/assets/hero-img.jpeg"
+          alt="Hero image"
+          className="aspect-auto h-full w-fit border object-contain"
+        />
+      </div>
+    </div>
+  );
+};
+
+export default Main;
