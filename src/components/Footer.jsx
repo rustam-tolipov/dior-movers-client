@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 border-t-2 border-gray-50 text-center text-gray-50 lg:text-left dark:bg-white dark:text-gray-900">
+    <footer className="border-t-2 border-gray-50 bg-gray-100 text-center text-gray-50 lg:text-left dark:bg-white dark:text-gray-900">
       {/* <div className="flex items-center justify-center border-y-2 border-gray-200 p-6 lg:justify-between dark:border-gray-200">
         <div className="mr-12 hidden lg:block">
           <span>Get connected with us on social networks:</span>
@@ -195,10 +195,8 @@ const Footer = () => {
       {/* <!--Copyright section--> */}
       <div className="bg-gray-900 p-6 text-center dark:bg-gray-50">
         <span>© 2025 Copyright:</span>
-        <a
-          className="font-semibold text-gray-900 dark:bg-white"
-          href="https://tw-elements.com/"
-        >
+        <a className="font-semibold text-gray-900 dark:bg-gray-50" href="#">
+          {" "}
           Dior Movers
         </a>
       </div>
