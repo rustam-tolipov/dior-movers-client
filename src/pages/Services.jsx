@@ -10,7 +10,7 @@ const Services = () => {
       {/* Cover image */}
       <div className="relative flex w-full items-center justify-center p-8 md:h-[70dvh]">
         <img
-          src="https://images.unsplash.com/photo-1600725935160-f67ee4f6084a?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="/assets/services-page-bg.webp"
           alt="Cover image"
           className="absolute left-0 top-0 z-0 h-full w-full object-cover brightness-50"
         />
@@ -94,7 +94,7 @@ const Services = () => {
         </div>
       </div>
       {/* Info */}
-      <div className="container p-4 flex h-fit w-full flex-col items-center gap-8 py-20">
+      <div className="container flex h-fit w-full flex-col items-center gap-8 p-4 py-20">
         <div className="flex flex-col items-center gap-2">
           <p className="text-sm font-medium uppercase text-red-600 md:text-lg">
             Services
@@ -104,8 +104,8 @@ const Services = () => {
           </h1>
         </div>
 
-        <div className="flex md:w-3/5 flex-col gap-4">
-          <p className="text-justify text-base md:text-lg text-gray-800">
+        <div className="flex flex-col gap-4 md:w-3/5">
+          <p className="text-justify text-base text-gray-800 md:text-lg">
             Moving can be stressful, but with our professional team, you can
             enjoy a smooth and hassle-free experience. Whether you're relocating
             your home or office, we provide efficient, safe, and affordable
@@ -113,33 +113,33 @@ const Services = () => {
             transportation, we handle every step with care and precision.
           </p>
         </div>
-        <div className="flex md:w-3/5 flex-col items-center gap-4">
+        <div className="flex flex-col items-center gap-4 md:w-3/5">
           <h1 className="text-lg font-bold text-gray-800">
             Reliable and Hassle-Free Moving Services
           </h1>
 
-          <p className="text-justify text-base md:text-lg text-gray-800">
+          <p className="text-justify text-base text-gray-800 md:text-lg">
             Moving can be stressful, but with our professional team, you can
             enjoy a smooth and hassle-free experience. Whether you're relocating
             your home or office, we provide efficient, safe, and affordable
             moving solutions tailored to your needs. From packing to
             transportation, we handle every step with care and precision.
           </p>
-          <p className="text-justify text-base md:text-lg text-gray-800">
+          <p className="text-justify text-base text-gray-800 md:text-lg">
             Every move is different, which is why we offer flexible and
             customizable moving plans. Whether you need full-service packing,
             furniture disassembly, or just transportation, our team is here to
             assist you. We work around your schedule to ensure a seamless
             transition, making your move as easy as possible.
           </p>
-          <p className="text-justify text-base md:text-lg text-gray-800">
+          <p className="text-justify text-base text-gray-800 md:text-lg">
             Getting started is simple! Fill out our quick and easy form to
             receive a free, no-obligation quote for your move. Our friendly team
             will assess your needs and provide a personalized estimate. Don’t
             let moving stress you out—let us handle the heavy lifting while you
             focus on settling into your new space!
           </p>
-          <p className="text-justify text-base md:text-lg text-gray-800">
+          <p className="text-justify text-base text-gray-800 md:text-lg">
             Moving is more than just transporting boxes—it’s about transitioning
             to a new chapter in your life. That’s why we go above and beyond to
             make your move as seamless as possible. With years of experience, a

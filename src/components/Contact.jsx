@@ -5,7 +5,7 @@ const Contact = () => {
     <div className="container mx-auto px-4 py-20 lg:px-12 lg:pb-52 lg:pt-32">
       <div className="relative flex w-full flex-col items-center justify-center gap-8 overflow-hidden rounded-2xl bg-red-600 py-6 md:h-64 md:py-0">
         <img
-          src="/assets/cta.png"
+          src="/assets/cta.webp"
           alt="Contact background"
           className="absolute z-0 aspect-auto h-full w-full object-cover opacity-10"
         />

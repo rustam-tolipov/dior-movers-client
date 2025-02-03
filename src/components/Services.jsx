@@ -17,7 +17,7 @@ const Services = () => {
         {/* Image */}
         <div className="h-full w-full md:w-1/2">
           <img
-            src="/assets/service1.png"
+            src="/assets/service1.webp"
             alt="Service image"
             className="lg:h-10/12 mr-auto aspect-auto md:w-11/12 lg:w-10/12"
           />
@@ -60,7 +60,7 @@ const Services = () => {
         {/* Image */}
         <div className="h-full w-full md:w-1/2">
           <img
-            src="/assets/service2.png"
+            src="/assets/service2.webp"
             alt="Service image"
             className="lg:h-10/12 ml-auto aspect-auto md:w-11/12 lg:w-10/12"
           />
@@ -71,7 +71,7 @@ const Services = () => {
         {/* Image */}
         <div className="h-full w-full md:w-1/2">
           <img
-            src="/assets/service3.png"
+            src="/assets/service3.webp"
             alt="Service image"
             className="lg:h-10/12 mr-auto aspect-auto md:w-11/12 lg:w-10/12"
           />

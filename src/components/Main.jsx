@@ -22,7 +22,7 @@ const Main = () => {
       </div>
       <div className="flex w-full items-center justify-center">
         <img
-          src="/assets/hero-img.jpeg"
+          src="/assets/hero-img.webp"
           alt="Hero image"
           className="hidden aspect-auto h-full w-fit border object-contain lg:block"
         />

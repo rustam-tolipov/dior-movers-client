@@ -10,7 +10,7 @@ const About = () => {
       {/* Cover image */}
       <div className="relative flex h-[70dvh] w-full items-center justify-center p-8">
         <img
-          src="https://images.unsplash.com/photo-1601654717399-7486d5ebedca?q=80&w=2876&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="/assets/about-page-bg.webp"
           alt="Cover image"
           className="absolute left-0 top-0 z-0 h-full w-full object-cover brightness-50"
         />
@@ -23,7 +23,7 @@ const About = () => {
       </div>
 
       {/* ABOUT US */}
-      <div className="container flex w-full flex-col gap-8 p-4 py-32 md:h-screen md:flex-row md:items-center md:justify-center md:gap-0 md:pb-52">
+      <div className="container flex w-full flex-col gap-8 p-4 py-32 md:min-h-screen md:flex-row md:justify-center md:gap-0 md:pb-52">
         <div className="flex h-full flex-col md:w-3/5">
           {/* subtitle */}
           <span className="text-md uppercase text-red-600">Know Us Better</span>
@@ -90,7 +90,7 @@ const About = () => {
       <div className="container p-4 md:p-0 md:pb-52">
         <div className="relative flex w-full flex-col items-center justify-center gap-8 overflow-hidden rounded-2xl bg-stone-950 py-12 md:h-64 md:p-0">
           <img
-            src="/assets/cta.png"
+            src="/assets/cta.webp"
             alt="Contact background"
             className="absolute z-0 aspect-auto h-full w-full object-cover opacity-10"
           />
