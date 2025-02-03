@@ -23,8 +23,8 @@ const About = () => {
       </div>
 
       {/* ABOUT US */}
-      <div className="container flex h-screen w-full py-32 pb-52">
-        <div className="flex h-full w-3/5 flex-col">
+      <div className="container flex w-full flex-col gap-8 p-4 py-32 md:h-screen md:flex-row md:items-center md:justify-center md:gap-0 md:pb-52">
+        <div className="flex h-full flex-col md:w-3/5">
           {/* subtitle */}
           <span className="text-md uppercase text-red-600">Know Us Better</span>
           {/* title */}
@@ -53,12 +53,12 @@ const About = () => {
             Contact Us
           </button>
         </div>
-        <div className="flex h-fit w-4/12 flex-col gap-8 border p-8">
+        <div className="flex h-fit flex-col gap-8 border p-8 md:w-4/12">
           <div className="w-12/12 h-full">
             <img
               src="/assets/feature-1.png"
               alt="Reason"
-              className="mb-4 h-12 w-fit"
+              className="mb-4 h-12 md:w-fit"
             />
             <h3 className="text-md pb-1 font-medium">Our Mission</h3>
             <p className="text-justify text-sm leading-6 text-gray-600">
@@ -73,7 +73,7 @@ const About = () => {
             <img
               src="/assets/feature-3.png"
               alt="Reason"
-              className="mb-4 h-12 w-fit"
+              className="mb-4 h-12 md:w-fit"
             />
             <h3 className="text-md pb-1 font-medium">Our Vision</h3>
             <p className="text-justify text-sm leading-6 text-gray-600">
@@ -87,8 +87,8 @@ const About = () => {
       </div>
 
       {/* MORE */}
-      <div className="container pb-52">
-        <div className="relative flex h-64 w-full flex-col items-center justify-center gap-8 overflow-hidden rounded-2xl bg-stone-950">
+      <div className="container p-4 md:p-0 md:pb-52">
+        <div className="relative flex w-full flex-col items-center justify-center gap-8 overflow-hidden rounded-2xl bg-stone-950 py-12 md:h-64 md:p-0">
           <img
             src="/assets/cta.png"
             alt="Contact background"
@@ -97,28 +97,28 @@ const About = () => {
 
           <h1 className="text-2xl text-gray-50">A Company Evolution</h1>
 
-          <div className="flex w-4/5 justify-between">
+          <div className="flex w-4/5 flex-col items-center justify-between gap-12 md:flex-row md:items-start md:gap-0">
             <div className="flex flex-col items-center justify-between">
               <span className="mb-4 h-12 w-12 rounded-full bg-gray-50"></span>
               <span className="text-md text-gray-50">2015</span>
               <p className="text-sm text-gray-50">Company Founded</p>
             </div>
 
-            <span className="mt-6 h-1 w-32 rounded-full bg-gray-400"></span>
+            <span className="mt-6 hidden h-1 w-32 rounded-full bg-gray-400 md:block"></span>
 
             <div className="flex flex-col items-center justify-between">
               <span className="mb-4 h-12 w-12 rounded-full bg-gray-50"></span>
               <span className="text-md text-gray-50">2017</span>
               <p className="text-sm text-gray-50">First Major Project</p>
             </div>
-            <span className="mt-6 h-1 w-32 rounded-full bg-gray-400"></span>
+            <span className="mt-6 hidden h-1 w-32 rounded-full bg-gray-400 md:block"></span>
 
             <div className="flex flex-col items-center justify-between">
               <span className="mb-4 h-12 w-12 rounded-full bg-gray-50"></span>
               <span className="text-md text-gray-50">2019</span>
               <p className="text-sm text-gray-50">Expansion to New Markets</p>
             </div>
-            <span className="mt-6 h-1 w-32 rounded-full bg-gray-400"></span>
+            <span className="mt-6 hidden h-1 w-32 rounded-full bg-gray-400 md:block"></span>
 
             <div className="flex flex-col items-center justify-between">
               <span className="mb-4 h-12 w-12 rounded-full bg-gray-50"></span>
