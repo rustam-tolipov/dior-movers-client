@@ -62,12 +62,12 @@ const Navbar = () => {
         </button>
       </nav>
       {/* Mobile */}
-      <div className="h-18 flex lg:hidden">
+      <div className="h-18 flex justify-center items-center lg:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
-          strokeWidth={1.5}
+          strokeWidth={2}
           stroke="currentColor"
           className="size-10"
         >
