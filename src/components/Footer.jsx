@@ -13,7 +13,7 @@ const Footer = () => {
             corrupti impedit adipisci, maiores hic minima tenetur unde aliquam
             voluptate! Non, facilis accusamus?
           </p>
-          <button className="mb-6 mt-6 w-fit rounded-full bg-gray-950 px-3 py-1 text-sm font-medium text-gray-100 lg:mt-auto lg:px-6 lg:py-2 lg:text-base">
+          <button className="mb-6 mt-6 w-fit rounded-full bg-gray-950 px-3 py-1 text-sm font-medium text-gray-100 lg:mt-8 lg:px-6 lg:py-2 lg:text-base">
             Contact Us
           </button>
         </div>

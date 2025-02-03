@@ -3,26 +3,30 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="flex h-fit w-full flex-row justify-between bg-red-600 px-12 py-6">
+    <div className="flex h-fit w-full flex-row items-center justify-between bg-red-600 p-4 md:px-12 md:py-6">
       {/* Logo */}
-      <img src="/logo.svg" alt="Logo" className="h-12 w-fit" />
+      <img
+        src="/logo.svg"
+        alt="Logo"
+        className="aspect-auto h-12 w-fit max-w-[6rem]"
+      />
       {/* Lang */}
-      <ul className="flex items-center gap-3">
-        <li className="h-10 w-10 rounded-full border-2">
+      <ul className="flex items-center gap-2 md:gap-3">
+        <li className="h-8 w-8 rounded-full border-2 md:h-10 md:w-10">
           <img
             src="/assets/uzb-flag.png"
             alt="Language image"
             className="aspect-square h-full w-full"
           />
         </li>
-        <li className="h-10 w-10 rounded-full border-2">
+        <li className="h-8 w-8 rounded-full border-2 md:h-10 md:w-10">
           <img
             src="/assets/rus-flag.png"
             alt="Language image"
             className="aspect-square h-full w-full"
           />
         </li>
-        <li className="h-10 w-10 rounded-full border-2">
+        <li className="h-8 w-8 rounded-full border-2 md:h-10 md:w-10">
           <img
             src="/assets/usa-flag.png"
             alt="Language image"
@@ -47,7 +51,7 @@ const Navbar = () => {
         </button>
       </nav>
       {/* Mobile */}
-      <div className="h-18 lg:hidden flex">
+      <div className="h-18 flex lg:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
