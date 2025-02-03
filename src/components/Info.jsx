@@ -2,7 +2,7 @@ import React from "react";
 
 const Info = () => {
   return (
-    <div className="container flex h-fit flex-col gap-20 pb-40 pt-20">
+    <div className="container flex h-fit flex-col md:px-4 gap-20 pb-40 pt-20">
       {/* Title */}
       <div className="flex flex-col gap-2">
         <p className="text-lg font-medium uppercase text-red-600">
@@ -11,8 +11,8 @@ const Info = () => {
         <h1 className="text-4xl font-bold">Why Choose Us?</h1>
       </div>
       {/* Reasons */}
-      <div className="flex h-full items-center justify-between">
-        <div className="flex h-full w-fit flex-col items-center gap-6">
+      <div className="flex h-full flex-col items-center justify-between gap-12 lg:flex-row">
+        <div className="flex h-full w-fit flex-col items-center gap-2 lg:gap-6">
           {/* icon */}
           <img
             src="/assets/feature-1.png"
@@ -20,7 +20,7 @@ const Info = () => {
             className="h-18 w-fit"
           />
           {/* info */}
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center gap-2 lg:gap-4">
             <h3 className="text-2xl font-semibold">Trusted Professionals</h3>
             <p className="w-9/12 text-center text-lg tracking-wide">
               Our experienced and friendly team is committed to delivering
@@ -28,7 +28,7 @@ const Info = () => {
             </p>
           </div>
         </div>
-        <div className="flex h-full w-fit flex-col items-center gap-6">
+        <div className="flex h-full w-fit flex-col items-center gap-2 lg:gap-6">
           {/* icon */}
           <img
             src="/assets/feature-2.png"
@@ -36,7 +36,7 @@ const Info = () => {
             className="h-18 w-fit"
           />
           {/* info */}
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center gap-2 lg:gap-4">
             <h3 className="text-2xl font-semibold">Effortless Moving</h3>
             <p className="w-9/12 text-center text-lg tracking-wide">
               We handle your belongings with precision and care, ensuring a
@@ -44,7 +44,7 @@ const Info = () => {
             </p>
           </div>
         </div>
-        <div className="flex h-full w-fit flex-col items-center gap-6">
+        <div className="flex h-full w-fit flex-col items-center gap-2 lg:gap-6">
           {/* icon */}
           <img
             src="/assets/feature-3.png"
@@ -52,7 +52,7 @@ const Info = () => {
             className="h-18 w-fit"
           />
           {/* info */}
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center gap-2 lg:gap-4">
             <h3 className="text-2xl font-semibold">Customer Satisfaction</h3>
             <p className="w-9/12 text-center text-lg tracking-wide">
               Your happiness is our priority! We go the extra mile to provide

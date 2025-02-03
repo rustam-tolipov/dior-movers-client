@@ -12,7 +12,7 @@ const FrequentlyAskedQuestions = () => {
           <h1 className="text-4xl font-bold">Frequently Asked Questions</h1>
         </div>
         {/* FAQ */}
-        <div className="flex w-8/12 flex-col gap-2">
+        <div className="flex w-10/12 flex-col gap-2 lg:w-8/12">
           <div className="flex flex-col">
             <div className="flex h-16 w-full items-center justify-between rounded-md bg-white px-8 text-lg font-medium text-gray-900 shadow-sm">
               How do I book a moving, cleaning, or handyman service?

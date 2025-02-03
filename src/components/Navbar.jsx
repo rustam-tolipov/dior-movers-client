@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="flex h-fit bg-red-600 w-full flex-row justify-between px-12 py-6">
+    <div className="flex h-fit w-full flex-row justify-between bg-red-600 px-12 py-6">
       {/* Logo */}
       <img src="/logo.svg" alt="Logo" className="h-12 w-fit" />
       {/* Lang */}
@@ -31,7 +31,7 @@ const Navbar = () => {
         </li>
       </ul>
       {/* Nav */}
-      <nav className="flex items-center gap-10">
+      <nav className="hidden items-center gap-10 lg:flex">
         <Link to="/" className="text-lg tracking-wide text-red-50">
           Home
         </Link>
@@ -46,6 +46,23 @@ const Navbar = () => {
           Contact Us
         </button>
       </nav>
+      {/* Mobile */}
+      <div className="h-18 lg:hidden flex">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="size-10"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </div>
     </div>
   );
 };

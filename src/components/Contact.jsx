@@ -2,18 +2,18 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="container px-12 pb-52 pt-32">
+    <div className="container py-20 md:px-4 lg:px-12 lg:pb-52 lg:pt-32">
       <div className="relative flex h-64 w-full flex-col items-center justify-center gap-8 overflow-hidden rounded-2xl bg-red-600">
         <img
           src="/assets/cta.png"
           alt="Contact background"
           className="absolute z-0 aspect-auto h-full w-full object-cover opacity-10"
         />
-        <h1 className="z-10 text-5xl font-bold text-gray-100">
+        <h1 className="z-10 text-4xl font-bold text-gray-100 lg:text-5xl">
           Reach out to us Today!
         </h1>
 
-        <button className="relative flex items-center gap-2 rounded-full bg-gray-950 py-3 pl-20 pr-8 text-xl font-medium text-red-50">
+        <button className="relative flex items-center gap-2 rounded-full bg-gray-950 py-3 pl-20 pr-8 text-lg font-medium text-red-50 lg:text-xl">
           <span className="absolute left-0 flex h-16 w-16 rounded-full border-4 border-gray-950 bg-gray-50 p-4 transition-all hover:border-8 active:border-4">
             <svg
               fill="#000"

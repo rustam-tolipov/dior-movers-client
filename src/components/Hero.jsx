@@ -4,7 +4,7 @@ import Main from "./Main";
 
 const Hero = () => {
   return (
-    <div className="flex h-screen w-full flex-col items-center bg-red-600">
+    <div className="flex w-full flex-col items-center bg-red-600 lg:h-screen">
       {/* Navbar */}
       <Navbar />
       {/* Main */}

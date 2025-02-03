@@ -16,8 +16,8 @@ const Services = () => {
         />
 
         <div className="container z-10 flex h-full w-full">
-          <div className="flex h-full w-3/5 items-start justify-end pt-8">
-            <h1 className="text-5xl font-semibold text-gray-50 drop-shadow-xl">
+          <div className="flex h-full w-3/5 items-start justify-end pt-10">
+            <h1 className="text-4xl font-semibold text-gray-50 drop-shadow-xl">
               Get a Free Quote for Stress-Free Moving Today!
             </h1>
           </div>
