@@ -2,24 +2,26 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="container py-20 md:px-4 lg:px-12 lg:pb-52 lg:pt-32">
-      <div className="relative flex h-64 w-full flex-col items-center justify-center gap-8 overflow-hidden rounded-2xl bg-red-600">
+    <div className="container mx-auto px-4 py-20 lg:px-12 lg:pb-52 lg:pt-32">
+      <div className="relative flex w-full flex-col items-center justify-center gap-8 overflow-hidden rounded-2xl bg-red-600 py-6 md:h-64 md:py-0">
         <img
           src="/assets/cta.png"
           alt="Contact background"
           className="absolute z-0 aspect-auto h-full w-full object-cover opacity-10"
         />
-        <h1 className="z-10 text-4xl font-bold text-gray-100 lg:text-5xl">
+        <h1 className="z-10 text-2xl font-bold text-gray-100 md:text-4xl lg:text-5xl">
           Reach out to us Today!
         </h1>
 
-        <button className="relative flex items-center gap-2 rounded-full bg-gray-950 py-3 pl-20 pr-8 text-lg font-medium text-red-50 lg:text-xl">
-          <span className="absolute left-0 flex h-16 w-16 rounded-full border-4 border-gray-950 bg-gray-50 p-4 transition-all hover:border-8 active:border-4">
+        <button className="relative flex items-center gap-2 rounded-full bg-gray-950 py-2 pl-16 md:pl-20 pr-6 md:pr-8 text-lg font-medium text-red-50 md:py-3 lg:text-xl">
+          <span className="absolute left-0 flex h-12 w-12 rounded-full border-4 border-gray-950 bg-gray-50 p-2 transition-all hover:border-8 active:border-4 md:h-16 md:w-16 md:p-4">
             <svg
               fill="#000"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
+              height="100%"
+              width="100%"
             >
               <path
                 clipRule="evenodd"

@@ -2,9 +2,9 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="flex h-fit w-full flex-col items-center md:px-4">
-      <div className="container flex w-full justify-between">
-        <div className="flex w-2/6 flex-col gap-2">
+    <footer className="flex h-fit w-full flex-col items-center px-4">
+      <div className="container flex w-full flex-col justify-between py-8 md:flex-row md:py-0">
+        <div className="flex flex-col gap-2 md:w-2/6">
           <h3 className="text-lg font-semibold text-gray-900 lg:text-xl">
             Dior Moviers
           </h3>
@@ -17,9 +17,9 @@ const Footer = () => {
             Contact Us
           </button>
         </div>
-        <div className="flex h-full w-7/12 lg:w-3/6">
+        <div className="flex h-full flex-col gap-8 md:w-7/12 md:flex-row md:gap-0 lg:w-3/6">
           <div className="h-full w-full">
-            <div className="ml-auto w-fit">
+            <div className="w-fit md:ml-auto">
               <h4 className="pb-3 text-base font-medium lg:text-lg">
                 Help and services
               </h4>
@@ -31,7 +31,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="h-full w-full">
-            <div className="ml-auto w-fit">
+            <div className="w-fit md:ml-auto">
               <h4 className="pb-3 text-base font-medium lg:text-lg">
                 To explore
               </h4>
@@ -43,7 +43,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="h-full w-full">
-            <div className="ml-auto w-fit">
+            <div className="w-fit md:ml-auto">
               <h4 className="pb-3 text-base font-medium lg:text-lg">
                 About us
               </h4>
@@ -59,7 +59,7 @@ const Footer = () => {
       <div className="container flex w-full items-end justify-between pt-8">
         <div className="text-sm lg:text-base">© 2025 Dior Moviers</div>
 
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-4 md:gap-8">
           <a
             href="https://www.instagram.com"
             target="_blank"
