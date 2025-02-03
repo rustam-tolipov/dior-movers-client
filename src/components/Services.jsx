@@ -33,7 +33,7 @@ const Services = () => {
               everything from packing to transportation, ensuring a smooth and
               stress-free move to your new location.
             </p>
-            <button className="w-fit rounded-full bg-red-600 px-6 py-2 text-sm font-medium text-gray-100 md:px-8 md:text-base lg:text-lg">
+            <button className="w-fit rounded-full bg-red-600 px-6 py-2 text-sm font-medium text-gray-100 transition-all duration-200 hover:bg-red-800 active:scale-90 md:px-8 md:text-base lg:text-lg">
               Read More
             </button>
           </div>
@@ -52,7 +52,7 @@ const Services = () => {
               skilled handymen handle it all, ensuring your home or workspace
               stays in top shape.
             </p>
-            <button className="w-fit rounded-full bg-red-600 px-6 py-2 text-sm font-medium text-gray-100 md:px-8 md:text-base lg:text-lg">
+            <button className="w-fit rounded-full bg-red-600 px-6 py-2 text-sm font-medium text-gray-100 transition-all duration-200 hover:bg-red-800 active:scale-90 md:px-8 md:text-base lg:text-lg">
               Read More
             </button>
           </div>
@@ -87,7 +87,7 @@ const Services = () => {
               office, our expert cleaners provide deep and efficient cleaning
               for a fresh and healthy environment.
             </p>
-            <button className="w-fit rounded-full bg-red-600 px-6 py-2 text-sm font-medium text-gray-100 md:px-8 md:text-base lg:text-lg">
+            <button className="w-fit rounded-full bg-red-600 px-6 py-2 text-sm font-medium text-gray-100 transition-all duration-200 hover:bg-red-800 active:scale-90 md:px-8 md:text-base lg:text-lg">
               Read More
             </button>
           </div>

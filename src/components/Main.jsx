@@ -12,10 +12,10 @@ const Main = () => {
           when. Many desktop publishing packages and web page editors now use
         </p>
         <div className="flex flex-row-reverse items-center gap-6 md:flex-row">
-          <button className="rounded-full bg-gray-950 px-8 py-4 md:py-2 text-base font-medium text-gray-100 md:text-xl">
+          <button className="rounded-full bg-gray-950 px-8 py-4 text-base font-medium text-gray-100 transition-all duration-200 hover:bg-gray-800 active:scale-90 md:py-2 md:text-xl">
             Contact Us
           </button>
-          <button className="rounded-full bg-red-50 px-8 py-4 md:py-2 text-base font-medium text-gray-900 md:text-xl">
+          <button className="rounded-full bg-red-50 px-8 py-4 text-base font-medium text-gray-900 transition-all duration-200 hover:bg-gray-200 active:scale-90 md:py-2 md:text-xl">
             Learn More
           </button>
         </div>
