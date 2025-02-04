@@ -3,20 +3,11 @@ import { motion } from "motion/react";
 
 const buttonVariants = {
   hover: {
-    scale: [1, 1.5],
+    scale: 1.1,
     transition: {
-      yoyo: 10,
+      duration: 0.5,
+      repeat: Infinity,
     },
-  },
-};
-
-const variants = {
-  active: {
-    opacity: 0,
-  },
-  inactive: {
-    opacity: 1,
-    transition: { duration: 2 },
   },
 };
 
@@ -49,21 +40,12 @@ const Contact = () => {
 
         <motion.a
           href="tel:+998901234567"
-          variants={variants}
           className={`relative flex w-[12rem] items-center gap-2 rounded-full bg-gray-950 py-2 md:py-3
           ${isClicked ? "pl-10 pr-[4.5rem]" : "pl-[4.5rem] pr-6"}
-          text-base font-medium text-red-50 lg:text-base
-          `}
+          text-base font-medium text-red-50 lg:text-base`}
         >
           <motion.span
             variants={spanVariants}
-            whileHover={{
-              scale: 1.1,
-              transition: {
-                duration: 0.5,
-                repeat: Infinity,
-              },
-            }}
             animate={isClicked ? "active" : "inactive"}
             onClick={handleClick}
             whileTap={{ scale: 0.9 }}
@@ -86,19 +68,14 @@ const Contact = () => {
           </motion.span>
           {isClicked ? (
             <motion.span
-              animate={{
-                rotateX: "360deg",
-              }}
-              transition={{
-                duration: 0.3,
-              }}
-              width="4rem"
+              animate={{ rotateX: "360deg" }}
+              transition={{ duration: 0.3 }}
               className="tracking-wide"
             >
               901234567
             </motion.span>
           ) : (
-            <span width="4rem">Contact Us</span>
+            <span>Contact Us</span>
           )}
         </motion.a>
       </div>
