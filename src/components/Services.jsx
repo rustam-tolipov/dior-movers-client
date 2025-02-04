@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "motion/react";
 
 const Services = () => {
   return (
@@ -13,7 +14,13 @@ const Services = () => {
         </h1>
       </div>
       {/* Section 1*/}
-      <div className="flex w-full flex-col items-center justify-between gap-8 md:flex-row md:gap-0">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="flex w-full flex-col items-center justify-between gap-8 md:flex-row md:gap-0"
+      >
         {/* Image */}
         <div className="h-full w-full md:w-1/2">
           <img
@@ -38,9 +45,15 @@ const Services = () => {
             </button>
           </div>
         </div>
-      </div>
+      </motion.div>
       {/* Section 2*/}
-      <div className="flex w-full flex-col-reverse items-center justify-between gap-8 md:flex-row">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="flex w-full flex-col-reverse items-center justify-between gap-8 md:flex-row"
+      >
         {/* Info */}
         <div className="w-full md:w-1/2">
           <div className="mr-auto flex flex-col gap-2 md:gap-4 lg:w-10/12">
@@ -65,9 +78,15 @@ const Services = () => {
             className="lg:h-10/12 ml-auto aspect-auto md:w-11/12 lg:w-10/12"
           />
         </div>
-      </div>
+      </motion.div>
       {/* Section 3*/}
-      <div className="flex w-full flex-col items-center justify-between gap-8 md:flex-row md:gap-0">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="flex w-full flex-col items-center justify-between gap-8 md:flex-row md:gap-0"
+      >
         {/* Image */}
         <div className="h-full w-full md:w-1/2">
           <img
@@ -92,7 +111,7 @@ const Services = () => {
             </button>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
