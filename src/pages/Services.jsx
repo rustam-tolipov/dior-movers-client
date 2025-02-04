@@ -34,7 +34,7 @@ const Services = () => {
                   From Address
                 </label>
                 <input
-                  className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 placeholder:font-light focus:outline-none"
+                  className="focus:shadow-outline text-sm w-full appearance-none rounded border px-3 py-3 leading-tight text-gray-700 placeholder:font-light focus:outline-none"
                   id="fromAddress"
                   type="text"
                   placeholder="Tashkent,.."
@@ -48,7 +48,7 @@ const Services = () => {
                   To Address
                 </label>
                 <input
-                  className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 placeholder:font-light focus:outline-none"
+                  className="focus:shadow-outline text-sm w-full appearance-none rounded border px-3 py-3 leading-tight text-gray-700 placeholder:font-light focus:outline-none"
                   id="toAddress"
                   type="text"
                   placeholder="Samarkand, 12A.."
@@ -59,7 +59,7 @@ const Services = () => {
                   How Much (1 bedroom or 3 bedroom)
                 </label>
                 <select
-                  className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 focus:outline-none"
+                  className="focus:shadow-outline w-full appearance-none rounded border px-3 py-3 text-sm leading-tight text-gray-700 focus:outline-none"
                   id="size"
                 >
                   <option value="1-bedroom">1 Bedroom</option>
@@ -76,9 +76,10 @@ const Services = () => {
                   Moving Date
                 </label>
                 <input
-                  className="focus:shadow-outline min-h-10 w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 placeholder:font-normal focus:outline-none"
+                  className="focus:shadow-outline min-h-10 w-full appearance-none rounded border px-3 py-3 text-sm leading-tight text-gray-700 placeholder:font-normal focus:outline-none"
                   id="movingDate"
                   type="date"
+                  defaultValue={new Date().toISOString().split("T")[0]}
                 />
               </div>
               <div className="flex items-center justify-between">
