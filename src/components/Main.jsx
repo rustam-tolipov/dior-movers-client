@@ -17,7 +17,7 @@ const Main = () => {
   ];
 
   return (
-    <div className="container mx-auto flex h-full w-full flex-col py-16 md:py-32 lg:flex-row lg:py-0">
+    <div className="container mx-auto flex h-full w-full flex-col py-16 md:py-32 lg:h-[90dvh] lg:flex-row lg:py-0">
       <div className="flex w-full flex-col items-center justify-center gap-10 pb-14 lg:items-start">
         <h1 className="text-center text-4xl font-bold leading-[1.2] tracking-normal text-gray-100 md:text-6xl lg:text-start">
           Make your moving <br /> easy with us
@@ -41,7 +41,7 @@ const Main = () => {
         <img
           src="/assets/hero-img.webp"
           alt="Hero image"
-          className="hidden aspect-auto h-full w-fit border object-cover lg:block"
+          className="mt-auto hidden aspect-auto h-full w-fit border object-cover lg:block lg:h-dvh 2xl:m-0 2xl:h-[64rem]"
         />
       </div>
     </div>

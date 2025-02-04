@@ -52,7 +52,7 @@ const Footer = () => (
       </div>
     </div>
     <span className="h-[1px] w-full bg-gray-100"></span>
-    <div className="container flex w-full items-end justify-between pt-8">
+    <div className="container flex w-full items-end justify-between py-2">
       <div className="text-sm lg:text-base">© 2025 Dior Movers</div>
       <div className="flex items-center gap-4 md:gap-8">
         {socialLinks.map((link, index) => (

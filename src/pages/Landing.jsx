@@ -10,7 +10,7 @@ import Contact from "../components/Contact";
 
 const Landing = () => {
   return (
-    <div className="relative w-dvw flex-col items-center">
+    <div className="max-w-dvw relative w-dvw flex-col items-center">
       {/* Hero */}
       <Hero />
       {/* Services */}
