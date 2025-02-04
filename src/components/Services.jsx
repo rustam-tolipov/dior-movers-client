@@ -43,7 +43,7 @@ const Services = () => {
       <div className="flex w-full flex-col-reverse items-center justify-between gap-8 md:flex-row">
         {/* Info */}
         <div className="w-full md:w-1/2">
-          <div className="ml-auto flex flex-col gap-2 md:gap-4 lg:w-10/12">
+          <div className="mr-auto flex flex-col gap-2 md:gap-4 lg:w-10/12">
             <h3 className="text-lg font-bold md:text-3xl lg:text-4xl">
               Handyman services
             </h3>
