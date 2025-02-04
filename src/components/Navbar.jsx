@@ -219,7 +219,7 @@ const Navbar = () => {
             }}
             className="fixed left-0 top-0 z-50 h-dvh w-dvw"
           >
-            <div className="flex h-full w-9/12 flex-col gap-12 rounded-e-md bg-slate-950 px-6 pt-6">
+            <div className="flex h-full w-9/12 flex-col gap-12 overflow-scroll overflow-y-scroll rounded-e-md bg-slate-950 px-6 pt-6">
               <h2 className="text-2xl font-medium uppercase text-gray-100">
                 Dior Movers
               </h2>
@@ -230,10 +230,10 @@ const Navbar = () => {
                 >
                   <Link to="/">Home</Link>
                 </li>
-                <li className="flex flex-col gap-6 text-xl uppercase tracking-wider text-gray-100">
+                <li className="flex flex-col gap-6 text-xl tracking-wider text-gray-100">
                   <button
                     onClick={handleOpenServies}
-                    className="flex items-center gap-1 transition-all active:scale-110"
+                    className="flex items-center gap-1 uppercase transition-all active:scale-110"
                   >
                     Services
                     <span className="flex h-7 w-7 items-center justify-center stroke-white">
