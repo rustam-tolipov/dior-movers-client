@@ -4,8 +4,10 @@ import { AnimatePresence, motion } from "motion/react";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const [openServices, setOpenServices] = useState(false);
 
   const handleOpenMenu = () => setOpenMenu(!openMenu);
+  const handleOpenServies = () => setOpenServices(!openServices);
 
   return (
     <div className="flex h-fit w-full flex-row items-center justify-between bg-red-600 p-4 md:px-12 md:py-6">
@@ -49,12 +51,29 @@ const Navbar = () => {
         >
           Home
         </Link>
-        <Link
-          to="/services"
-          className="text-lg tracking-wide text-red-50 underline-offset-8 transition-all duration-200 hover:text-white hover:underline active:scale-110"
+        <button
+          onMouseEnter={() => setOpenServices(true)}
+          onClick={() => setOpenServices(false)}
+          className="flex items-center gap-1 text-lg tracking-wide text-red-50 underline-offset-8 transition-all duration-200 hover:text-white hover:underline active:scale-110"
         >
           Services
-        </Link>
+          <span className="flex h-5 w-5 items-center justify-center">
+            <svg
+              fill="none"
+              strokeWidth={3}
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="m19.5 8.25-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+          </span>
+        </button>
         <Link
           to="/about"
           className="text-lg tracking-wide text-red-50 underline-offset-8 transition-all duration-200 hover:text-white hover:underline active:scale-110"
@@ -66,6 +85,102 @@ const Navbar = () => {
           Contact Us
         </button>
       </nav>
+      {/* Dropdown */}
+      <AnimatePresence>
+        {openServices && (
+          <motion.div
+            initial={{
+              x: -100,
+              opacity: 0,
+            }}
+            animate={{
+              x: 0,
+              opacity: 1,
+            }}
+            exit={{
+              x: -100,
+              opacity: 0,
+            }}
+            className="absolute left-0 top-28 z-50 flex h-fit w-full items-center justify-center px-12"
+          >
+            <div className="flex h-full w-full flex-row justify-around gap-8 overflow-hidden rounded-md bg-white p-8 py-12 shadow-2xl">
+              <div className="flex h-full w-full gap-4">
+                <span className="h-fit w-14">
+                  <img
+                    src="/assets/cargo-mover.png"
+                    alt="Moving services"
+                    className="h-full w-full"
+                  />
+                </span>
+                <div className="flex flex-col gap-1">
+                  <h4 className="text-md font-semibold text-gray-800">
+                    Moving Services
+                  </h4>
+                  <p className="text-sm text-gray-600">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Provident officiis.
+                  </p>
+                  <a
+                    href="/services"
+                    className="py-4 text-sm font-medium text-blue-500"
+                  >
+                    Learn more
+                  </a>
+                </div>
+              </div>
+              <div className="flex h-full w-full gap-4">
+                <span className="h-fit w-14">
+                  <img
+                    src="/assets/broom.png"
+                    alt="Cleaning services"
+                    className="h-full w-full"
+                  />
+                </span>
+                <div className="flex flex-col gap-1">
+                  <h4 className="text-md font-semibold text-gray-800">
+                    Cleaning Services
+                  </h4>
+                  <p className="text-sm text-gray-600">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Provident officiis.
+                  </p>
+                  <a
+                    href="/services"
+                    className="py-4 text-sm font-medium text-blue-500"
+                  >
+                    Learn more
+                  </a>
+                </div>
+              </div>
+              <div className="flex h-full w-full gap-4">
+                <span className="h-fit w-14">
+                  <img
+                    src="/assets/technician.png"
+                    alt="Handyman services"
+                    className="h-full w-full"
+                  />
+                </span>
+                <div className="flex flex-col gap-1">
+                  <h4 className="text-md font-semibold text-gray-800">
+                    Handyman Services
+                  </h4>
+                  <p className="text-sm text-gray-600">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Provident officiis.
+                  </p>
+                  <a
+                    href="/services"
+                    className="py-4 text-sm font-medium text-blue-500"
+                  >
+                    Learn more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Mobile */}
       <div
         onClick={handleOpenMenu}
