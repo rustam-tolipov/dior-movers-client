@@ -101,7 +101,7 @@ const Navbar = () => {
               x: -100,
               opacity: 0,
             }}
-            className="absolute left-0 top-28 z-50 flex h-fit w-full items-center justify-center px-12"
+            className="absolute left-0 top-28 z-50 hidden h-fit w-full items-center justify-center px-12 md:flex"
           >
             <div className="flex h-full w-full flex-row justify-around gap-8 overflow-hidden rounded-md bg-white p-8 py-12 shadow-2xl">
               <div className="flex h-full w-full gap-4">
@@ -226,24 +226,111 @@ const Navbar = () => {
               <ul className="flex flex-col gap-8">
                 <li
                   onClick={handleOpenMenu}
-                  className="text-xl uppercase tracking-wider text-gray-100"
+                  className="text-xl uppercase tracking-wider text-gray-100 transition-all active:scale-110"
                 >
                   <Link to="/">Home</Link>
                 </li>
-                <li
-                  onClick={handleOpenMenu}
-                  className="text-xl uppercase tracking-wider text-gray-100"
-                >
-                  <Link to="/services">Services</Link>
+                <li className="flex flex-col gap-6 text-xl uppercase tracking-wider text-gray-100">
+                  <button
+                    onClick={handleOpenServies}
+                    className="flex items-center gap-1 transition-all active:scale-110"
+                  >
+                    Services
+                    <span className="flex h-7 w-7 items-center justify-center stroke-white">
+                      <svg
+                        strokeWidth={2.5}
+                        stroke="#fff"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+
+                  <AnimatePresence>
+                    {openServices && (
+                      <div className="flex flex-col gap-5 pl-6">
+                        <motion.a
+                          initial={{
+                            opacity: 0,
+                            x: -50,
+                          }}
+                          animate={{
+                            opacity: 1,
+                            x: 0,
+                          }}
+                          transition={{
+                            delay: 0.05,
+                          }}
+                          exit={{
+                            opacity: 0,
+                            x: -50,
+                          }}
+                          href="/services"
+                          className="text-base"
+                        >
+                          - Moving
+                        </motion.a>
+                        <motion.a
+                          initial={{
+                            opacity: 0,
+                            x: -50,
+                          }}
+                          animate={{
+                            opacity: 1,
+                            x: 0,
+                          }}
+                          transition={{
+                            delay: 0.1,
+                          }}
+                          exit={{
+                            opacity: 0,
+                            x: -50,
+                          }}
+                          href="/services"
+                          className="text-base"
+                        >
+                          - Cleaning
+                        </motion.a>
+                        <motion.a
+                          initial={{
+                            opacity: 0,
+                            x: -50,
+                          }}
+                          animate={{
+                            opacity: 1,
+                            x: 0,
+                          }}
+                          transition={{
+                            delay: 0.15,
+                          }}
+                          exit={{
+                            opacity: 0,
+                            x: -50,
+                          }}
+                          href="/services"
+                          className="text-base"
+                        >
+                          - Handyman
+                        </motion.a>
+                      </div>
+                    )}
+                  </AnimatePresence>
                 </li>
                 <li
                   onClick={handleOpenMenu}
-                  className="text-xl uppercase tracking-wider text-gray-100"
+                  className="text-xl uppercase tracking-wider text-gray-100 transition-all active:scale-110"
                 >
                   <Link to="/about">About</Link>
                 </li>
                 <li onClick={handleOpenMenu} className="">
-                  <button className="rounded-full bg-red-500 px-6 py-2 text-sm uppercase text-gray-100">
+                  <button className="rounded-full bg-red-500 px-6 py-2 text-sm uppercase text-gray-100 transition-all active:scale-110">
                     Contact Us
                   </button>
                 </li>
