@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "motion/react";
 import {
   FaAngleDown,
@@ -11,11 +11,15 @@ import {
 } from "react-icons/fa6";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
   const [openMenu, setOpenMenu] = useState(false);
   const [openServices, setOpenServices] = useState(false);
 
   const handleToggleMenu = () => setOpenMenu(!openMenu);
   const handleToggleServices = () => setOpenServices(!openServices);
+
+  const handleClick = () => navigate("/contact");
 
   const navLinks = [
     { to: "/", label: "Home" },
@@ -89,9 +93,31 @@ const Navbar = () => {
           >
             Services <FaAngleDown className="text-xl" />
           </button>
-          <button className="rounded-full bg-gray-950 px-8 py-2 text-lg font-medium text-red-50 transition-all duration-200 hover:bg-red-900 active:scale-90">
-            Contact Us
-          </button>
+          <motion.div
+            initial={{
+              opacity: 0.5,
+              y: 30,
+              outline: "none",
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            whileHover={{
+              scale: 1.05,
+              outline: "3px solid #fff",
+            }}
+            whileTap={{
+              scale: 0.95,
+              outline: "3px solid #f00",
+            }}
+            transition={{
+              duration: 0.1,
+            }}
+            className="rounded-full bg-gray-950 px-8 py-2 text-lg font-medium text-red-50"
+          >
+            <Link to="/contact">Get a Quote</Link>
+          </motion.div>
         </nav>
         {/* Services Dropdown */}
         <AnimatePresence>
@@ -117,12 +143,12 @@ const Navbar = () => {
                         {service.title}
                       </h4>
                       <p className="text-sm text-gray-600">{service.desc}</p>
-                      <a
-                        href="/services"
+                      <Link
+                        to="/services"
                         className="py-4 text-sm font-medium text-blue-500"
                       >
                         Learn more
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 ))}
@@ -168,26 +194,49 @@ const Navbar = () => {
                       {openServices && (
                         <div className="flex flex-col gap-5 pl-6">
                           {services.map((service, index) => (
-                            <motion.a
+                            <motion.div
                               key={index}
                               initial={{ opacity: 0, x: -50 }}
                               animate={{ opacity: 1, x: 0 }}
                               transition={{ delay: 0.05 * (index + 1) }}
                               exit={{ opacity: 0, x: -50 }}
-                              href="/services"
                               className="text-base"
                             >
-                              - {service.title.split(" ")[0]}
-                            </motion.a>
+                              <Link to="/services">
+                                - {service.title.split(" ")[0]}
+                              </Link>
+                            </motion.div>
                           ))}
                         </div>
                       )}
                     </AnimatePresence>
                   </li>
                   <li onClick={handleToggleMenu} className="">
-                    <button className="rounded-full bg-red-500 px-6 py-2 text-sm uppercase text-gray-100 transition-all active:scale-110">
-                      Contact Us
-                    </button>
+                    <motion.div
+                      initial={{
+                        opacity: 0.5,
+                        y: 30,
+                        outline: "none",
+                      }}
+                      animate={{
+                        opacity: 1,
+                        y: 0,
+                      }}
+                      whileFocus={{
+                        scale: 1.05,
+                        outline: "3px solid #fff",
+                      }}
+                      whileTap={{
+                        scale: 0.95,
+                        outline: "3px solid #fff",
+                      }}
+                      transition={{
+                        duration: 0.1,
+                      }}
+                      className="rounded-full bg-red-500 px-6 py-2 text-sm uppercase text-gray-100 transition-all active:scale-110"
+                    >
+                      <Link to="/contact">Contact Us</Link>
+                    </motion.div>
                   </li>
                 </ul>
                 <div className="container mt-auto flex w-full items-end justify-between pb-6">

@@ -27,67 +27,54 @@ const Services = () => {
               className="flex h-fit flex-col gap-4 rounded-lg bg-gray-50 p-6 shadow-md md:w-4/5 md:gap-6"
             >
               <div className="">
-                <label
-                  className="block text-sm text-gray-700"
-                  htmlFor="fromAddress"
-                >
-                  From Address
+                <label className="block text-sm text-gray-700" htmlFor="name">
+                  Full Name
                 </label>
                 <input
                   className="focus:shadow-outline text-sm w-full appearance-none rounded border px-3 py-3 leading-tight text-gray-700 placeholder:font-light focus:outline-none"
-                  id="fromAddress"
+                  id="name"
                   type="text"
-                  placeholder="Tashkent,.."
+                  placeholder="Enter your full name"
                 />
               </div>
               <div className="">
-                <label
-                  className="block text-sm text-gray-700"
-                  htmlFor="toAddress"
-                >
-                  To Address
+                <label className="block text-sm text-gray-700" htmlFor="email">
+                  Email
                 </label>
                 <input
                   className="focus:shadow-outline text-sm w-full appearance-none rounded border px-3 py-3 leading-tight text-gray-700 placeholder:font-light focus:outline-none"
-                  id="toAddress"
-                  type="text"
-                  placeholder="Samarkand, 12A.."
+                  id="email"
+                  type="email"
+                  placeholder="Enter your email"
                 />
               </div>
               <div className="">
-                <label className="block text-sm text-gray-700" htmlFor="size">
-                  How Much (1 bedroom or 3 bedroom)
-                </label>
-                <select
-                  className="focus:shadow-outline w-full appearance-none rounded border px-3 py-3 text-sm leading-tight text-gray-700 focus:outline-none"
-                  id="size"
-                >
-                  <option value="1-bedroom">1 Bedroom</option>
-                  <option value="2-bedroom">2 Bedroom</option>
-                  <option value="3-bedroom">3 Bedroom</option>
-                  <option value="4-bedroom">4 Bedroom</option>
-                </select>
-              </div>
-              <div className="">
-                <label
-                  className="block text-sm text-gray-700"
-                  htmlFor="movingDate"
-                >
-                  Moving Date
+                <label className="block text-sm text-gray-700" htmlFor="phone">
+                  Phone Number
                 </label>
                 <input
-                  className="focus:shadow-outline min-h-10 w-full appearance-none rounded border px-3 py-3 text-sm leading-tight text-gray-700 placeholder:font-normal focus:outline-none"
-                  id="movingDate"
-                  type="date"
-                  defaultValue={new Date().toISOString().split("T")[0]}
+                  className="focus:shadow-outline text-sm w-full appearance-none rounded border px-3 py-3 leading-tight text-gray-700 placeholder:font-light focus:outline-none"
+                  id="phone"
+                  type="tel"
+                  placeholder="Enter your phone number"
                 />
+              </div>
+              <div className="">
+                <label className="block text-sm text-gray-700" htmlFor="message">
+                  Message
+                </label>
+                <textarea
+                  className="focus:shadow-outline text-sm w-full appearance-none rounded border px-3 py-3 leading-tight text-gray-700 placeholder:font-light focus:outline-none"
+                  id="message"
+                  placeholder="Enter your message"
+                ></textarea>
               </div>
               <div className="flex items-center justify-between">
                 <button
-                  className="focus:shadow-outline rounded-full bg-red-500 px-6 py-2 font-normal text-white hover:bg-blue-700 focus:outline-none md:px-8 md:py-4"
+                  className="focus:shadow-outline rounded-full bg-red-500 px-6 py-2 font-normal text-white hover:bg-blue-700 focus:outline-none md:px-8"
                   type="submit"
                 >
-                  Get Moving!
+                  Submit
                 </button>
               </div>
             </form>

@@ -1,30 +1,10 @@
-import React, { useState } from "react";
-import { motion } from "motion/react";
-
-const buttonVariants = {
-  hover: {
-    scale: 1.1,
-    transition: {
-      duration: 0.5,
-      repeat: Infinity,
-    },
-  },
-};
-
-const spanVariants = {
-  active: {
-    x: "9.5rem",
-  },
-  inactive: {
-    x: "0rem",
-    transition: { duration: 0.1 },
-  },
-};
+import React from "react";
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
-  const [isClicked, setIsClicked] = useState(false);
-
-  const handleClick = () => setIsClicked(!isClicked);
+  const navigate = useNavigate();
+  const handleClick = () => navigate("/about");
 
   return (
     <div className="container mx-auto px-4 py-20 lg:px-12 lg:pb-52 lg:pt-32">
@@ -38,7 +18,7 @@ const Contact = () => {
           Reach out to us Today!
         </h1>
 
-        <motion.a
+        {/* <motion.a
           href="tel:+998901234567"
           className={`relative flex w-[12rem] items-center gap-2 rounded-full bg-gray-950 py-2 md:py-3
           ${isClicked ? "pl-10 pr-[4.5rem]" : "pl-[4.5rem] pr-6"}
@@ -75,9 +55,36 @@ const Contact = () => {
               901234567
             </motion.span>
           ) : (
-            <span>Contact Us</span>
+            <span>Get a Quote</span>
           )}
-        </motion.a>
+        </motion.a> */}
+
+        <motion.button
+          initial={{
+            opacity: 0.5,
+            y: 30,
+            outline: "none",
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          whileHover={{
+            scale: 1.05,
+            outline: "4px solid #fff",
+          }}
+          whileTap={{
+            scale: 0.95,
+            outline: "4px solid #f00",
+          }}
+          transition={{
+            duration: 0.1,
+          }}
+          onClick={handleClick}
+          className="z-10 cursor-pointer rounded-full bg-black px-10 py-4 text-xl font-medium text-red-50"
+        >
+          Quote & Book Online
+        </motion.button>
       </div>
     </div>
   );

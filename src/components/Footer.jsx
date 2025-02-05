@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import { FaFacebook, FaInstagram, FaTelegram } from "react-icons/fa";
+import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 
 const FooterLinkSection = ({ title, links }) => (
   <div className="h-full w-full">
@@ -35,9 +37,31 @@ const Footer = () => (
           impedit adipisci, maiores hic minima tenetur unde aliquam voluptate!
           Non, facilis accusamus?
         </p>
-        <button className="mb-6 mt-6 w-fit rounded-full bg-gray-950 px-3 py-1 text-sm font-medium text-gray-100 transition-all duration-200 hover:bg-red-800 active:scale-95 lg:mt-8 lg:px-6 lg:py-2 lg:text-base">
-          Contact Us
-        </button>
+        <motion.div
+          initial={{
+            opacity: 0.5,
+            y: 30,
+            outline: "none",
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          whileHover={{
+            scale: 1.05,
+            outline: "3px solid #fff",
+          }}
+          whileTap={{
+            scale: 0.95,
+            outline: "3px solid #f00",
+          }}
+          transition={{
+            duration: 0.1,
+          }}
+          className="mb-6 mt-6 w-fit rounded-full bg-gray-950 px-3 py-1 text-sm font-medium text-gray-100 transition-all duration-200 hover:bg-red-800 active:scale-95 lg:mt-8 lg:px-6 lg:py-2 lg:text-base"
+        >
+          <Link to="/contact">Book a move</Link>
+        </motion.div>
       </div>
       <div className="flex h-full flex-col gap-8 md:w-7/12 md:flex-row md:gap-0 lg:w-3/6">
         <FooterLinkSection
@@ -54,7 +78,7 @@ const Footer = () => (
     <span className="h-[1px] w-full bg-gray-100"></span>
     <div className="container flex w-full items-end justify-between py-2">
       <div className="text-sm lg:text-base">© 2025 Dior Movers</div>
-      <div className="flex items-center gap-4 md:gap-8">
+      <div className="flex items-center gap-4 md:gap-6">
         {socialLinks.map((link, index) => (
           <a
             key={index}
@@ -62,7 +86,7 @@ const Footer = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="flex h-6 w-6 items-center justify-center hover:fill-red-500">
+            <span className="flex h-6 w-6 items-center justify-center hover:fill-red-500 md:h-8 md:w-8">
               {link.icon}
             </span>
           </a>

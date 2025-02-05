@@ -1,18 +1,22 @@
 import React from "react";
+import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 
 const Main = () => {
-  const buttons = [
+  const links = [
     {
-      text: "Contact Us",
+      text: "Get a Quote",
       bgColor: "bg-gray-950",
       textColor: "text-gray-100",
-      hoverColor: "hover:bg-gray-800",
+      hoverOutline: "hover:bg-gray-800",
+      location: "/contact",
     },
     {
       text: "Learn More",
       bgColor: "bg-red-50",
       textColor: "text-gray-900",
-      hoverColor: "hover:bg-gray-200",
+      hoverOutline: "hover:bg-gray-200",
+      location: "/services",
     },
   ];
 
@@ -27,13 +31,40 @@ const Main = () => {
           when. Many desktop publishing packages and web page editors now use
         </p>
         <div className="flex flex-row-reverse items-center gap-6 md:flex-row">
-          {buttons.map((button, index) => (
-            <button
+          {links.map((link, index) => (
+            <motion.div
+              initial={{
+                opacity: 0.5,
+                y: 30,
+                outline: "none",
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              whileHover={
+                link.text === "Get a Quote"
+                  ? {
+                      scale: 1.05,
+                      outline: "3px solid #fff",
+                    }
+                  : {
+                      scale: 1.05,
+                      outline: "3px solid #000",
+                    }
+              }
+              whileTap={{
+                scale: 0.95,
+                outline: "3px solid #f00",
+              }}
+              transition={{
+                duration: 0.1,
+              }}
               key={index}
-              className={`rounded-full ${button.bgColor} px-8 py-4 text-base font-medium ${button.textColor} transition-all duration-200 ${button.hoverColor} active:scale-90 md:py-2 md:text-xl`}
+              className={`rounded-full ${link.bgColor} px-8 py-4 text-base font-medium ${link.textColor} md:py-2 md:text-xl`}
             >
-              {button.text}
-            </button>
+              <Link to={link.location}>{link.text}</Link>
+            </motion.div>
           ))}
         </div>
       </div>
