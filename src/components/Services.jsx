@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 
 const servicesData = [
   {
@@ -9,6 +10,7 @@ const servicesData = [
       "Relocating? We make it easy! Our professional movers handle everything from packing to transportation, ensuring a smooth and stress-free move to your new location.",
     imgSrc: "/assets/service1.webp",
     reverse: false,
+    to: "/services/moving",
   },
   {
     title: "Handyman services",
@@ -16,6 +18,7 @@ const servicesData = [
       "Need quick fixes? From minor repairs to furniture assembly, our skilled handymen handle it all, ensuring your home or workspace stays in top shape.",
     imgSrc: "/assets/service2.webp",
     reverse: true,
+    to: "/services/handyman",
   },
   {
     title: "Cleaning services",
@@ -23,10 +26,11 @@ const servicesData = [
       "A spotless space is just a call away! Whether it's your home or office, our expert cleaners provide deep and efficient cleaning for a fresh and healthy environment.",
     imgSrc: "/assets/service3.webp",
     reverse: false,
+    to: "/services/cleaning",
   },
 ];
 
-const ServiceSection = ({ title, description, imgSrc, reverse }) => (
+const ServiceSection = ({ title, description, imgSrc, reverse, to }) => (
   <motion.div
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -47,9 +51,12 @@ const ServiceSection = ({ title, description, imgSrc, reverse }) => (
         <p className="w-full pb-4 text-sm leading-normal tracking-wide md:leading-8 lg:text-lg">
           {description}
         </p>
-        <button className="w-fit rounded-full bg-red-600 px-6 py-2 text-sm font-medium text-gray-100 transition-all duration-200 hover:bg-red-800 active:scale-90 md:px-8 md:text-base lg:text-lg">
+        <Link
+          to={to}
+          className="w-fit rounded-full bg-red-600 px-6 py-2 text-sm font-medium text-gray-100 transition-all duration-200 hover:bg-red-800 active:scale-90 md:px-8 md:text-base lg:text-lg"
+        >
           Read More
-        </button>
+        </Link>
       </div>
     </div>
   </motion.div>
