@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Hero from "../components/Hero";
 import Services from "../components/Services";
@@ -9,6 +9,10 @@ import FrequentlyAskedQuestions from "../components/FrequentlyAskedQuestions";
 import Contact from "../components/Contact";
 
 const Landing = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="max-w-dvw relative w-dvw flex-col items-center">
       {/* Hero */}

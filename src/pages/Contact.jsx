@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import ContactForm from "../components/ContactForm";
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="relative flex w-dvw flex-col items-center bg-gray-100">
       <Navbar />

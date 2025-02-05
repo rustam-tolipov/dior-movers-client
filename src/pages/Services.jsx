@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Contact from "../components/Contact";
@@ -21,6 +21,10 @@ const Services = () => {
     }
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="relative flex w-dvw flex-col items-center">
       <Navbar />
@@ -33,9 +37,9 @@ const Services = () => {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex h-full py-20 md:py-0 items-center justify-center md:w-3/5"
+            className="flex h-full items-center justify-center py-20 md:w-3/5 md:py-0"
           >
-            <h1 className="text-3xl text-center md:text-start md:text-6xl font-bold text-gray-50 drop-shadow-xl">
+            <h1 className="text-center text-3xl font-bold text-gray-50 drop-shadow-xl md:text-start md:text-6xl">
               {getCoverText()}
             </h1>
           </motion.div>
@@ -43,7 +47,7 @@ const Services = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="md:flex hidden h-full justify-center p-8 md:w-2/5 md:pr-8"
+            className="hidden h-full justify-center p-8 md:flex md:w-2/5 md:pr-8"
           >
             <ContactForm />
           </motion.div>
