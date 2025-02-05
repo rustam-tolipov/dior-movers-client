@@ -233,7 +233,7 @@ const Navbar = () => {
                       transition={{
                         duration: 0.1,
                       }}
-                      className="rounded-full bg-red-500 px-6 py-2 text-sm uppercase text-gray-100 transition-all active:scale-110"
+                      className="rounded-full w-fit bg-red-500 px-6 py-2 text-sm uppercase text-gray-100 transition-all active:scale-110"
                     >
                       <Link to="/contact">Contact Us</Link>
                     </motion.div>

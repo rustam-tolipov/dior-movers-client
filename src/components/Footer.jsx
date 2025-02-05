@@ -85,10 +85,9 @@ const Footer = () => (
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
+            className="flex items-center justify-center text-base hover:fill-red-500 md:text-lg"
           >
-            <span className="flex h-6 w-6 items-center justify-center hover:fill-red-500 md:h-8 md:w-8">
-              {link.icon}
-            </span>
+            {link.icon}
           </a>
         ))}
       </div>
