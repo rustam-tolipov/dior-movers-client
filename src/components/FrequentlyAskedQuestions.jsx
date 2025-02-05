@@ -36,7 +36,7 @@ const Item = ({ question, answer }) => {
   return (
     <div className="flex w-full flex-col gap-2 overflow-hidden md:gap-0">
       <div
-        className="flex w-full items-center justify-between rounded-md bg-white px-4 py-2 text-sm font-medium text-gray-900 shadow-sm md:h-16 md:px-8 md:text-lg"
+        className="z-20 flex w-full items-center justify-between rounded-md bg-white px-4 py-2 text-sm font-medium text-gray-900 shadow-sm md:h-16 md:px-8 md:text-lg"
         onClick={() => setOpen(!open)}
       >
         {question}
@@ -68,10 +68,10 @@ const Item = ({ question, answer }) => {
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ y: -10, opacity: 0 }}
+            initial={{ y: -5, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -10, opacity: 0 }}
-            className="flex w-full items-center justify-center gap-4 px-4 text-sm font-medium text-gray-900 md:h-16 md:px-8 md:text-base"
+            exit={{ y: -5, opacity: 0 }}
+            className="z-10 flex w-full items-center justify-center gap-4 px-4 text-sm font-medium text-gray-900 md:h-16 md:px-8 md:text-base"
           >
             <span className="min-h-10 w-1 rounded-full bg-gray-600"></span>
             {answer}
