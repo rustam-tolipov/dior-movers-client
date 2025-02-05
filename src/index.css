@@ -15,3 +15,39 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+.cleaning {
+  background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.473) 0%,
+      rgba(0, 0, 0, 0.587) 50%,
+      rgba(0, 0, 0, 0.727) 100%
+    ),
+    url("/assets/cleaning-cover.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.moving {
+  background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.742) 0%,
+      rgba(0, 0, 0, 0.549) 50%,
+      rgba(0, 0, 0, 0.181) 100%
+    ),
+    url("/assets/services-page-bg.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.handyman {
+  background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.742) 0%,
+      rgba(0, 0, 0, 0.384) 50%,
+      rgba(0, 0, 0, 0.181) 100%
+    ),
+    url("/assets/handyman-cover.jpeg");
+  background-size: cover;
+  background-position: center;
+}

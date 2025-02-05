@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "motion/react";
 import {
   FaAngleDown,
@@ -11,15 +11,11 @@ import {
 } from "react-icons/fa6";
 
 const Navbar = () => {
-  const navigate = useNavigate();
-
   const [openMenu, setOpenMenu] = useState(false);
   const [openServices, setOpenServices] = useState(false);
 
   const handleToggleMenu = () => setOpenMenu(!openMenu);
   const handleToggleServices = () => setOpenServices(!openServices);
-
-  const handleClick = () => navigate("/contact");
 
   const navLinks = [
     { to: "/", label: "Home" },
@@ -30,17 +26,20 @@ const Navbar = () => {
     {
       img: "/assets/cargo-mover.png",
       title: "Moving Services",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident officiis.",
+      desc: "Experience a seamless relocation with our expert movers. We handle everything from packing to transportation, ensuring your move is stress-free and efficient.",
+      to: "/services/moving",
     },
     {
       img: "/assets/broom.png",
       title: "Cleaning Services",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident officiis.",
+      desc: "Enjoy a pristine environment with our comprehensive cleaning services. Our team provides thorough and efficient cleaning for both residential and commercial spaces.",
+      to: "/services/cleaning",
     },
     {
       img: "/assets/technician.png",
       title: "Handyman Services",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident officiis.",
+      desc: "Keep your property in top condition with our reliable handyman services. From minor repairs to furniture assembly, our skilled professionals are here to help.",
+      to: "/services/handyman",
     },
   ];
 
@@ -144,8 +143,9 @@ const Navbar = () => {
                       </h4>
                       <p className="text-sm text-gray-600">{service.desc}</p>
                       <Link
-                        to="/services"
+                        to={service.to}
                         className="py-4 text-sm font-medium text-blue-500"
+                        onClick={handleToggleServices}
                       >
                         Learn more
                       </Link>
@@ -201,8 +201,9 @@ const Navbar = () => {
                               transition={{ delay: 0.05 * (index + 1) }}
                               exit={{ opacity: 0, x: -50 }}
                               className="text-base"
+                              onClick={handleToggleMenu}
                             >
-                              <Link to="/services">
+                              <Link to={service.to}>
                                 - {service.title.split(" ")[0]}
                               </Link>
                             </motion.div>
@@ -233,7 +234,7 @@ const Navbar = () => {
                       transition={{
                         duration: 0.1,
                       }}
-                      className="rounded-full w-fit bg-red-500 px-6 py-2 text-sm uppercase text-gray-100 transition-all active:scale-110"
+                      className="w-fit rounded-full bg-red-500 px-6 py-2 text-sm uppercase text-gray-100 transition-all active:scale-110"
                     >
                       <Link to="/contact">Contact Us</Link>
                     </motion.div>

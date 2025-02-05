@@ -8,7 +8,7 @@ const Contact = () => {
 
   return (
     <div className="container mx-auto px-4 py-20 lg:px-12 lg:pb-52 lg:pt-32">
-      <div className="relative flex w-full flex-col items-center justify-center gap-8 overflow-hidden rounded-2xl bg-red-600 py-6 md:h-64 md:py-0">
+      <div className="relative flex w-full flex-col items-center justify-center gap-4 md:gap-8 overflow-hidden rounded-2xl bg-red-600 py-6 md:h-64 md:py-0">
         <img
           src="/assets/cta.webp"
           alt="Contact background"
@@ -81,7 +81,7 @@ const Contact = () => {
             duration: 0.1,
           }}
           onClick={handleClick}
-          className="z-10 cursor-pointer rounded-full bg-black px-10 py-4 text-xl font-medium text-red-50"
+          className="z-10 cursor-pointer rounded-full bg-black px-6 py-2 md:px-10 md:py-4 md:text-xl font-medium text-red-50"
         >
           Quote & Book Online
         </motion.button>
