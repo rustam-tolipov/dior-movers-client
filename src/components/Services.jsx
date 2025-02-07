@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
+import MyImage from "../utils/Image";
 
 const servicesData = [
   {
@@ -39,10 +40,10 @@ const ServiceSection = ({ title, description, imgSrc, reverse, to }) => (
     className={`flex h-fit w-full flex-col items-center justify-between gap-8 md:flex-row lg:gap-20 ${reverse ? "md:flex-row-reverse" : ""}`}
   >
     <div className="h-full w-full md:w-1/2">
-      <img
+      <MyImage
         src={imgSrc}
         alt={`${title} image`}
-        className="aspect-auto h-full w-full"
+        design="aspect-auto h-full w-full"
       />
     </div>
     <div className="w-full md:w-1/2">

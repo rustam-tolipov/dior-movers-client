@@ -29,7 +29,7 @@ const Services = () => {
     <div className="relative flex w-dvw flex-col items-center">
       <Navbar />
       {/* Cover image */}
-      <div className="relative flex w-full items-center justify-center md:h-[70dvh]">
+      <div className="relative flex w-full items-center justify-center bg-gray-900 md:h-[70dvh]">
         <CoverImage />
 
         <div className="container z-10 flex h-full w-full flex-col gap-8 overflow-hidden md:flex-row md:gap-0">

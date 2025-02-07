@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import ContactForm from "../components/ContactForm";
+import CoverImage from "../utils/CoverImage";
 
 const Contact = () => {
   useEffect(() => {
@@ -12,12 +13,14 @@ const Contact = () => {
     <div className="relative flex w-dvw flex-col items-center bg-gray-100">
       <Navbar />
       {/* Cover image */}
-      <div className="relative flex h-32 w-full items-center justify-center p-8 lg:h-64">
-        <img
+      <div className="relative flex h-32 w-full items-center justify-center bg-gray-900 p-8 lg:h-64">
+        {/* <img
           src="/assets/about-page-bg.webp"
           alt="Cover image"
           className="absolute left-0 top-0 z-0 h-full w-full object-cover brightness-50"
-        />
+        /> */}
+
+        <CoverImage />
 
         <div className="container z-10 flex h-full w-full items-center justify-center">
           <h1 className="text-3xl font-semibold text-gray-50 drop-shadow-xl lg:text-6xl">

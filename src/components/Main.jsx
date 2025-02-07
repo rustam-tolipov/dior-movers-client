@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
+import MyImage from "../utils/Image";
 
 const Main = () => {
   const links = [
@@ -69,11 +70,13 @@ const Main = () => {
         </div>
       </div>
       <div className="flex w-full items-center justify-center">
-        <img
-          src="/assets/hero-img.webp"
-          alt="Hero image"
-          className="mt-auto hidden aspect-auto h-full w-fit border object-cover lg:block lg:h-dvh 2xl:m-0 2xl:h-[64rem]"
-        />
+        <div className="mt-auto hidden h-full w-fit lg:block lg:h-dvh 2xl:m-0 2xl:h-[64rem]">
+          <MyImage
+            alt="Hero image"
+            src="/assets/hero-img.webp"
+            design="aspect-auto h-full w-full border object-cover shadow-xl"
+          />
+        </div>
       </div>
     </div>
   );

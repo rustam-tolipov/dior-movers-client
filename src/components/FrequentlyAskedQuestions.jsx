@@ -41,28 +41,30 @@ const Item = ({ question, answer }) => {
       >
         {question}
         <span className="flex h-6 w-6 items-center justify-center md:h-8 md:w-8">
-          <motion.svg
-            initial={{ rotateZ: open ? "-30deg" : "30deg" }}
-            animate={{ rotateZ: "0deg" }}
-            fill="none"
-            strokeWidth={1.5}
-            stroke="#f00"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-            height="100%"
-            width="100%"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d={
-                open
-                  ? "M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-                  : "M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-              }
-            />
-          </motion.svg>
+          <AnimatePresence>
+            <motion.svg
+              initial={{ rotateZ: open ? "-30deg" : "30deg" }}
+              animate={{ rotateZ: "0deg" }}
+              fill="none"
+              strokeWidth={1.5}
+              stroke={open ? "#008000" : "#f00"}
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              height="100%"
+              width="100%"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d={
+                  open
+                    ? "M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                    : "M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                }
+              />
+            </motion.svg>
+          </AnimatePresence>
         </span>
       </div>
 
