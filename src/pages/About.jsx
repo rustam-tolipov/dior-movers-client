@@ -1,10 +1,13 @@
 import React, { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import CoverImage from "../utils/CoverImage";
 
 const About = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -18,7 +21,7 @@ const About = () => {
 
         <div className="container z-10 flex h-full w-full items-center justify-center">
           <h1 className="text-6xl font-semibold text-gray-50 drop-shadow-xl">
-            About Us
+            {t("about.title")}
           </h1>
         </div>
       </div>
@@ -27,31 +30,23 @@ const About = () => {
       <div className="container flex w-full flex-col gap-8 p-4 py-32 md:min-h-screen md:flex-row md:justify-center md:gap-0 md:pb-52">
         <div className="flex h-full flex-col md:w-3/5">
           {/* subtitle */}
-          <span className="text-md uppercase text-red-600">Know Us Better</span>
+          <span className="text-md uppercase text-red-600">
+            {t("about.subtitle")}
+          </span>
           {/* title */}
           <h2 className="pb-6 text-2xl font-semibold text-gray-900">
-            We're hyper-focused on <br /> what we do best
+            {t("about.mainTitle")}
           </h2>
           {/* paragraph */}
           <p className="text-md w-4/5 pb-4 text-gray-700">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero,
-            blanditiis possimus quia distinctio labore architecto. Vel saepe et
-            culpa eum sit natus accusantium amet ullam laboriosam eos, dolorem
-            animi qui. Opsum dolor sit, amet consectetur adipisicing elit.
-            Sapiente officia id ipsam error beatae libero, ipsum corrupti dolor
-            deserunt ullam. Ratione iure dolorum quae amet quas eos rem
-            recusandae esse.
+            {t("about.paragraph1")}
           </p>
           <p className="w-4/5 pb-10 text-sm text-gray-600">
-            Vel saepe et culpa eum sit natus accusantium amet ullam laboriosam
-            eos, dolorem animi qui. Opsum dolor sit, amet consectetur
-            adipisicing elit. Sapiente officia id ipsam error beatae libero,
-            ipsum corrupti dolor deserunt ullam. Ratione iure dolorum quae amet
-            quas eos rem recusandae esse.
+            {t("about.paragraph2")}
           </p>
           {/* button */}
           <button className="text-md w-fit rounded-full bg-gray-950 px-6 py-2 font-medium text-gray-100">
-            Contact Us
+            {t("about.contactButton")}
           </button>
         </div>
         <div className="flex h-fit flex-col gap-8 border p-8 md:w-4/12">
@@ -61,12 +56,11 @@ const About = () => {
               alt="Reason"
               className="mb-4 h-12 md:w-fit"
             />
-            <h3 className="text-md pb-1 font-medium">Our Mission</h3>
+            <h3 className="text-md pb-1 font-medium">
+              {t("about.missionTitle")}
+            </h3>
             <p className="text-justify text-sm leading-6 text-gray-600">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-              iure iusto pariatur, ab dolorum natus officiis nobis nesciunt
-              dolore magni voluptas, iste neque corporis excepturi ratione
-              facilis fugiat at aspernatur?
+              {t("about.missionDescription")}
             </p>
           </div>
           <span className="h-[2px] w-full bg-gray-200"></span>
@@ -76,12 +70,11 @@ const About = () => {
               alt="Reason"
               className="mb-4 h-12 md:w-fit"
             />
-            <h3 className="text-md pb-1 font-medium">Our Vision</h3>
+            <h3 className="text-md pb-1 font-medium">
+              {t("about.visionTitle")}
+            </h3>
             <p className="text-justify text-sm leading-6 text-gray-600">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-              iure iusto pariatur, ab dolorum natus officiis nobis nesciunt
-              dolore magni voluptas, iste neque corporis excepturi ratione
-              facilis fugiat at aspernatur?
+              {t("about.visionDescription")}
             </p>
           </div>
         </div>
@@ -96,13 +89,17 @@ const About = () => {
             className="absolute z-0 aspect-auto h-full w-full object-cover opacity-10"
           />
 
-          <h1 className="text-2xl text-gray-50">A Company Evolution</h1>
+          <h1 className="text-2xl text-gray-50">
+            {t("about.evolutionTitle")}
+          </h1>
 
           <div className="flex w-4/5 flex-col items-center justify-between gap-12 md:flex-row md:items-start md:gap-0">
             <div className="flex flex-col items-center justify-between">
               <span className="mb-4 h-12 w-12 rounded-full bg-gray-50"></span>
               <span className="text-md text-gray-50">2015</span>
-              <p className="text-sm text-gray-50">Company Founded</p>
+              <p className="text-sm text-gray-50">
+                {t("about.evolution2015")}
+              </p>
             </div>
 
             <span className="mt-6 hidden h-1 w-32 rounded-full bg-gray-400 md:block"></span>
@@ -110,21 +107,27 @@ const About = () => {
             <div className="flex flex-col items-center justify-between">
               <span className="mb-4 h-12 w-12 rounded-full bg-gray-50"></span>
               <span className="text-md text-gray-50">2017</span>
-              <p className="text-sm text-gray-50">First Major Project</p>
+              <p className="text-sm text-gray-50">
+                {t("about.evolution2017")}
+              </p>
             </div>
             <span className="mt-6 hidden h-1 w-32 rounded-full bg-gray-400 md:block"></span>
 
             <div className="flex flex-col items-center justify-between">
               <span className="mb-4 h-12 w-12 rounded-full bg-gray-50"></span>
               <span className="text-md text-gray-50">2019</span>
-              <p className="text-sm text-gray-50">Expansion to New Markets</p>
+              <p className="text-sm text-gray-50">
+                {t("about.evolution2019")}
+              </p>
             </div>
             <span className="mt-6 hidden h-1 w-32 rounded-full bg-gray-400 md:block"></span>
 
             <div className="flex flex-col items-center justify-between">
               <span className="mb-4 h-12 w-12 rounded-full bg-gray-50"></span>
               <span className="text-md text-gray-50">2021</span>
-              <p className="text-sm text-gray-50">Awarded Best Startup</p>
+              <p className="text-sm text-gray-50">
+                {t("about.evolution2021")}
+              </p>
             </div>
           </div>
         </div>

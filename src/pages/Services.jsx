@@ -4,20 +4,23 @@ import Footer from "../components/Footer";
 import Contact from "../components/Contact";
 import ContactForm from "../components/ContactForm";
 import { Outlet, useLocation } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
+import CoverImage from "../utils/CoverImage";
+import { useTranslation } from "react-i18next";
 
 const Services = () => {
+  const { t } = useTranslation();
   const location = useLocation();
 
   const getCoverText = () => {
     if (location.pathname.includes("/cleaning")) {
-      return "Professional Cleaning Services!";
+      return t("servicesPage.cleaning.title");
     } else if (location.pathname.includes("/moving")) {
-      return "Stress-Free Moving";
+      return t("servicesPage.moving.title");
     } else if (location.pathname.includes("/handyman")) {
-      return "Reliable Handyman Services!";
+      return t("servicesPage.handyman.title");
     } else {
-      return "Our Services!";
+      return t("servicesPage.title");
     }
   };
 
@@ -62,45 +65,3 @@ const Services = () => {
 };
 
 export default Services;
-
-const CoverImage = () => {
-  const location = useLocation();
-
-  const coverImageVariants = {
-    initial: { opacity: 0 },
-    animate: { opacity: 1, transition: { duration: 1 } },
-    exit: { opacity: 0 },
-  };
-
-  return (
-    <AnimatePresence>
-      {location.pathname.includes("/cleaning") && (
-        <motion.div
-          variants={coverImageVariants}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          className="cleaning absolute left-0 top-0 z-0 h-full w-full"
-        ></motion.div>
-      )}
-      {location.pathname.includes("/moving") && (
-        <motion.div
-          variants={coverImageVariants}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          className="moving absolute left-0 top-0 z-0 h-full w-full"
-        ></motion.div>
-      )}
-      {location.pathname.includes("/handyman") && (
-        <motion.div
-          variants={coverImageVariants}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          className="handyman absolute left-0 top-0 z-0 h-full w-full"
-        ></motion.div>
-      )}
-    </AnimatePresence>
-  );
-};

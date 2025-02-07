@@ -1,19 +1,22 @@
 import React from "react";
-import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import MyImage from "../utils/Image";
 
 const Main = () => {
+  const { t } = useTranslation();
+
   const links = [
     {
-      text: "Get a Quote",
+      text: t("nav.getQuote"),
       bgColor: "bg-gray-950",
       textColor: "text-gray-100",
       hoverOutline: "hover:bg-gray-800",
       location: "/contact",
     },
     {
-      text: "Learn More",
+      text: t("nav.learnMore"),
       bgColor: "bg-red-50",
       textColor: "text-gray-900",
       hoverOutline: "hover:bg-gray-200",
@@ -25,11 +28,10 @@ const Main = () => {
     <div className="container mx-auto flex h-full w-full flex-col py-16 md:py-32 lg:h-[90dvh] lg:flex-row lg:py-0">
       <div className="flex w-full flex-col items-center justify-center gap-10 pb-14 lg:items-start">
         <h1 className="text-center text-4xl font-bold leading-[1.2] tracking-normal text-gray-100 md:text-6xl lg:text-start">
-          Make your moving <br /> easy with us
+          {t("main.mainTitle")}
         </h1>
         <p className="w-11/12 text-center text-lg text-gray-100 md:text-2xl md:leading-8 md:tracking-wide lg:text-start">
-          It is a long established fact that the readable content of a page
-          when. Many desktop publishing packages and web page editors now use
+          {t("main.mainDescription")}
         </p>
         <div className="flex flex-row-reverse items-center gap-6 md:flex-row">
           {links.map((link, index) => (
@@ -44,7 +46,7 @@ const Main = () => {
                 y: 0,
               }}
               whileHover={
-                link.text === "Get a Quote"
+                link.text === t("nav.getQuote")
                   ? {
                       scale: 1.05,
                       outline: "3px solid #fff",

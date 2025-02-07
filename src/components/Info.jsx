@@ -1,23 +1,18 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const reasons = [
   {
+    key: "trustedProfessionals",
     imgSrc: "/assets/feature-1.png",
-    title: "Trusted Professionals",
-    description:
-      "Our experienced and friendly team is committed to delivering top-quality service with care and reliability.",
   },
   {
+    key: "effortlessMoving",
     imgSrc: "/assets/feature-2.png",
-    title: "Effortless Moving",
-    description:
-      "We handle your belongings with precision and care, ensuring a smooth and hassle-free relocation.",
   },
   {
+    key: "customerSatisfaction",
     imgSrc: "/assets/feature-3.png",
-    title: "Customer Satisfaction",
-    description:
-      "Your happiness is our priority! We go the extra mile to provide top-notch service you can rely on.",
   },
 ];
 
@@ -37,20 +32,31 @@ const Reason = ({ imgSrc, title, description }) => (
   </div>
 );
 
-const Info = () => (
-  <div className="container mx-auto flex h-fit flex-col gap-20 py-20 md:px-4 md:pb-40 md:pt-20">
-    <div className="flex flex-col items-center gap-2 md:items-start">
-      <p className="text-sm font-medium uppercase text-red-600 md:text-lg">
-        Reliable Service, Exceptional Results
-      </p>
-      <h1 className="text-xl font-bold md:text-4xl">Why Choose Us?</h1>
+const Info = () => {
+  const { t } = useTranslation();
+
+  return (
+    <div className="container mx-auto flex h-fit flex-col gap-20 py-20 md:px-4 md:pb-40 md:pt-20">
+      <div className="flex flex-col items-center gap-2 md:items-start">
+        <p className="text-sm font-medium uppercase text-red-600 md:text-lg">
+          {t("infoComponent.reliableService")}
+        </p>
+        <h1 className="text-xl font-bold md:text-4xl">
+          {t("infoComponent.whyChooseUs")}
+        </h1>
+      </div>
+      <div className="flex h-full flex-col items-center justify-between gap-12 lg:flex-row">
+        {reasons.map((reason, index) => (
+          <Reason
+            key={index}
+            imgSrc={reason.imgSrc}
+            title={t(`infoComponent.${reason.key}.title`)}
+            description={t(`infoComponent.${reason.key}.description`)}
+          />
+        ))}
+      </div>
     </div>
-    <div className="flex h-full flex-col items-center justify-between gap-12 lg:flex-row">
-      {reasons.map((reason, index) => (
-        <Reason key={index} {...reason} />
-      ))}
-    </div>
-  </div>
-);
+  );
+};
 
 export default Info;

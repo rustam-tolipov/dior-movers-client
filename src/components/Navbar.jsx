@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   FaAngleDown,
   FaBars,
@@ -9,8 +9,11 @@ import {
   FaTelegram,
   FaXmark,
 } from "react-icons/fa6";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
+  const { t, i18n } = useTranslation();
+
   const [openMenu, setOpenMenu] = useState(false);
   const [openServices, setOpenServices] = useState(false);
 
@@ -18,27 +21,27 @@ const Navbar = () => {
   const handleToggleServices = () => setOpenServices(!openServices);
 
   const navLinks = [
-    { to: "/", label: "Home" },
-    { to: "/about", label: "About" },
+    { to: "/", label: t("nav.home") },
+    { to: "/about", label: t("nav.about") },
   ];
 
   const services = [
     {
       img: "/assets/cargo-mover.png",
-      title: "Moving Services",
-      desc: "Experience a seamless relocation with our expert movers. We handle everything from packing to transportation, ensuring your move is stress-free and efficient.",
+      title: t("nav.servicesInfo.moving.title"),
+      desc: t("nav.servicesInfo.moving.desc"),
       to: "/services/moving",
     },
     {
       img: "/assets/broom.png",
-      title: "Cleaning Services",
-      desc: "Enjoy a pristine environment with our comprehensive cleaning services. Our team provides thorough and efficient cleaning for both residential and commercial spaces.",
+      title: t("nav.servicesInfo.cleaning.title"),
+      desc: t("nav.servicesInfo.cleaning.desc"),
       to: "/services/cleaning",
     },
     {
       img: "/assets/technician.png",
-      title: "Handyman Services",
-      desc: "Keep your property in top condition with our reliable handyman services. From minor repairs to furniture assembly, our skilled professionals are here to help.",
+      title: t("nav.servicesInfo.handyman.title"),
+      desc: t("nav.servicesInfo.handyman.desc"),
       to: "/services/handyman",
     },
   ];
@@ -60,20 +63,36 @@ const Navbar = () => {
           />
         </Link>
         <ul className="flex items-center gap-2 md:gap-3">
-          {["uzb-flag.png", "rus-flag.png", "usa-flag.png"].map(
-            (flag, index) => (
-              <li
-                key={index}
-                className="flex h-8 w-8 cursor-pointer items-center justify-center overflow-hidden rounded-full border-2 transition-all duration-200 hover:scale-110 md:h-10 md:w-10"
-              >
-                <img
-                  src={`/assets/${flag}`}
-                  alt="Language image"
-                  className="aspect-square size-auto"
-                />
-              </li>
-            ),
-          )}
+          <li
+            className="flex h-8 w-8 cursor-pointer items-center justify-center overflow-hidden rounded-full border-2 transition-all duration-200 hover:scale-110 md:h-10 md:w-10"
+            onClick={() => i18n.changeLanguage("uz")}
+          >
+            <img
+              src={`/assets/flags/uz.png`}
+              alt="Language image"
+              className="aspect-square size-auto"
+            />
+          </li>
+          <li
+            className="flex h-8 w-8 cursor-pointer items-center justify-center overflow-hidden rounded-full border-2 transition-all duration-200 hover:scale-110 md:h-10 md:w-10"
+            onClick={() => i18n.changeLanguage("ru")}
+          >
+            <img
+              src={`/assets/flags/ru.png`}
+              alt="Language image"
+              className="aspect-square size-auto"
+            />
+          </li>
+          <li
+            className="flex h-8 w-8 cursor-pointer items-center justify-center overflow-hidden rounded-full border-2 transition-all duration-200 hover:scale-110 md:h-10 md:w-10"
+            onClick={() => i18n.changeLanguage("en")}
+          >
+            <img
+              src={`/assets/flags/us.png`}
+              alt="Language image"
+              className="aspect-square size-auto"
+            />
+          </li>
         </ul>
         <nav className="hidden items-center gap-10 lg:flex">
           {navLinks.map((link, index) => (
@@ -90,35 +109,19 @@ const Navbar = () => {
             onClick={handleToggleServices}
             className="flex items-center gap-1 text-lg tracking-wide text-red-50 underline-offset-8 transition-all duration-200 hover:text-white hover:underline active:scale-110"
           >
-            Services <FaAngleDown className="text-xl" />
+            {t("nav.services")} <FaAngleDown className="text-xl" />
           </button>
           <motion.div
-            initial={{
-              opacity: 0.5,
-              y: 30,
-              outline: "none",
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            whileHover={{
-              scale: 1.05,
-              outline: "3px solid #fff",
-            }}
-            whileTap={{
-              scale: 0.95,
-              outline: "3px solid #f00",
-            }}
-            transition={{
-              duration: 0.1,
-            }}
+            initial={{ opacity: 0.5, y: 30, outline: "none" }}
+            animate={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.05, outline: "3px solid #fff" }}
+            whileTap={{ scale: 0.95, outline: "3px solid #f00" }}
+            transition={{ duration: 0.1 }}
             className="rounded-full bg-gray-950 px-8 py-2 text-lg font-medium text-red-50"
           >
-            <Link to="/contact">Get a Quote</Link>
+            <Link to="/contact">{t("nav.contact")}</Link>
           </motion.div>
         </nav>
-        {/* Services Dropdown */}
         <AnimatePresence>
           {openServices && (
             <motion.div
@@ -130,7 +133,7 @@ const Navbar = () => {
               <div className="min-h-50 flex w-full flex-row justify-around gap-8 overflow-hidden rounded-md bg-white p-8 py-12 shadow-2xl">
                 {services.map((service, index) => (
                   <div key={index} className="flex h-full w-full gap-4">
-                    <span className="h-fit w-14">
+                    <span className="h-fit w-32">
                       <img
                         src={service.img}
                         alt={service.title}
@@ -147,7 +150,7 @@ const Navbar = () => {
                         className="py-4 text-sm font-medium text-blue-500"
                         onClick={handleToggleServices}
                       >
-                        Learn more
+                        {t("nav.learnMore")}
                       </Link>
                     </div>
                   </div>
@@ -188,7 +191,7 @@ const Navbar = () => {
                       onClick={handleToggleServices}
                       className="flex items-center gap-2 uppercase transition-all active:scale-110"
                     >
-                      Services <FaAngleDown className="text-2xl" />
+                      {t("nav.services")} <FaAngleDown className="text-2xl" />
                     </button>
                     <AnimatePresence>
                       {openServices && (
@@ -204,7 +207,7 @@ const Navbar = () => {
                               onClick={handleToggleMenu}
                             >
                               <Link to={service.to}>
-                                - {service.title.split(" ")[0]}
+                                - {service.title.split("nav. ")[0]}
                               </Link>
                             </motion.div>
                           ))}
@@ -214,29 +217,14 @@ const Navbar = () => {
                   </li>
                   <li onClick={handleToggleMenu} className="">
                     <motion.div
-                      initial={{
-                        opacity: 0.5,
-                        y: 30,
-                        outline: "none",
-                      }}
-                      animate={{
-                        opacity: 1,
-                        y: 0,
-                      }}
-                      whileFocus={{
-                        scale: 1.05,
-                        outline: "3px solid #fff",
-                      }}
-                      whileTap={{
-                        scale: 0.95,
-                        outline: "3px solid #fff",
-                      }}
-                      transition={{
-                        duration: 0.1,
-                      }}
+                      initial={{ opacity: 0.5, y: 30, outline: "none" }}
+                      animate={{ opacity: 1, y: 0 }}
+                      whileFocus={{ scale: 1.05, outline: "3px solid #fff" }}
+                      whileTap={{ scale: 0.95, outline: "3px solid #fff" }}
+                      transition={{ duration: 0.1 }}
                       className="w-fit rounded-full bg-red-500 px-6 py-2 text-sm uppercase text-gray-100 transition-all active:scale-110"
                     >
-                      <Link to="/contact">Contact Us</Link>
+                      <Link to="/contact">{t("nav.contact")}</Link>
                     </motion.div>
                   </li>
                 </ul>
