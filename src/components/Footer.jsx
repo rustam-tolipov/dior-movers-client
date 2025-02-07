@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from "react";
 import { FaFacebook, FaInstagram, FaTelegram } from "react-icons/fa";
 import { motion } from "motion/react";

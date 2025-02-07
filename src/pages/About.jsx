@@ -14,12 +14,6 @@ const About = () => {
       <Navbar />
       {/* Cover image */}
       <div className="relative flex h-[70dvh] w-full items-center justify-center bg-gray-900 p-8">
-        {/* <img
-          src="/assets/about-page-bg.webp"
-          alt="Cover image"
-          className="absolute left-0 top-0 z-0 h-full w-full object-cover brightness-50"
-        /> */}
-
         <CoverImage />
 
         <div className="container z-10 flex h-full w-full items-center justify-center">
