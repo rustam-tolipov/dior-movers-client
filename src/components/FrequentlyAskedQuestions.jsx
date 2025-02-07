@@ -65,16 +65,20 @@ const Item = ({ question, answer }) => {
           </motion.svg>
         </span>
       </div>
+
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ y: -5, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -5, opacity: 0 }}
-            className="z-10 flex w-full items-center justify-center gap-4 px-4 text-sm font-medium text-gray-900 md:h-16 md:px-8 md:text-base"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="overflow-hidden"
           >
-            <span className="min-h-10 w-1 rounded-full bg-gray-600"></span>
-            {answer}
+            <div className="z-10 flex w-full items-center justify-center gap-4 px-4 text-sm font-medium text-gray-900 md:h-16 md:px-8 md:text-base">
+              <span className="min-h-10 w-1 rounded-full bg-gray-600"></span>
+              {answer}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
