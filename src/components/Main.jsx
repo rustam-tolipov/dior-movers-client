@@ -25,15 +25,15 @@ const Main = () => {
   ];
 
   return (
-    <div className="container mx-auto flex h-full w-full flex-col py-16 md:py-32 lg:h-[90dvh] lg:flex-row lg:py-0">
+    <div className="container mx-auto flex h-full w-full flex-col px-4 py-16 md:py-32 lg:h-[90dvh] 2xl:h-auto lg:flex-row lg:py-0">
       <div className="flex w-full flex-col items-center justify-center gap-10 pb-14 lg:items-start">
-        <h1 className="text-center text-4xl font-bold leading-[1.2] tracking-normal text-gray-100 md:text-6xl lg:text-start">
+        <h1 className="text-center text-4xl font-bold leading-[1.2] tracking-normal text-gray-100 md:text-5xl lg:text-start lg:text-6xl">
           {t("main.mainTitle")}
         </h1>
-        <p className="w-11/12 text-center text-lg text-gray-100 md:text-2xl md:leading-8 md:tracking-wide lg:text-start">
+        <p className="w-11/12 text-center text-lg text-gray-100 md:text-xl lg:text-start lg:text-2xl lg:leading-8 lg:tracking-wide">
           {t("main.mainDescription")}
         </p>
-        <div className="flex flex-row-reverse items-center gap-6 md:flex-row">
+        <div className="flex flex-row-reverse items-center gap-3 md:gap-6 lg:flex-row">
           {links.map((link, index) => (
             <motion.div
               initial={{
@@ -64,7 +64,7 @@ const Main = () => {
                 duration: 0.1,
               }}
               key={index}
-              className={`rounded-full ${link.bgColor} px-8 py-4 text-base font-medium ${link.textColor} md:py-2 md:text-xl`}
+              className={`rounded-full ${link.bgColor} px-6 text-base font-medium md:px-8 ${link.textColor} py-3 md:text-xl`}
             >
               <Link to={link.location}>{link.text}</Link>
             </motion.div>

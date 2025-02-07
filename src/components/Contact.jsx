@@ -16,7 +16,7 @@ const Contact = () => {
           alt="Contact background"
           className="absolute z-0 aspect-auto h-full w-full object-cover opacity-10"
         />
-        <h1 className="z-10 text-2xl font-bold text-gray-100 md:text-4xl lg:text-5xl">
+        <h1 className="z-10 text-xl font-bold text-gray-100 md:text-4xl lg:text-5xl">
           {t("contactComponent.title")}
         </h1>
 

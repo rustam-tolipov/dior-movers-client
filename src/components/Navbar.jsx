@@ -53,7 +53,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="flex h-fit w-full items-center justify-center bg-red-600">
+    <div className="flex h-fit w-full items-center justify-center bg-red-600 px-4">
       <div className="container flex h-fit w-full flex-row items-center justify-between p-4 md:px-0 md:py-6">
         <Link to="/" className="cursor-pointer">
           <img
@@ -128,12 +128,12 @@ const Navbar = () => {
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: -100, opacity: 0 }}
-              className="absolute left-0 top-28 z-50 hidden h-fit w-full items-center justify-center px-12 md:flex"
+              className="absolute left-0 top-28 z-50 hidden h-fit w-full items-center justify-center px-12 lg:flex"
             >
-              <div className="min-h-50 flex w-full flex-row justify-around gap-8 overflow-hidden rounded-md bg-white p-8 py-12 shadow-2xl">
+              <div className="min-h-50 container flex w-full flex-row justify-around gap-8 overflow-hidden rounded-md bg-white p-8 py-12 shadow-2xl">
                 {services.map((service, index) => (
                   <div key={index} className="flex h-full w-full gap-4">
-                    <span className="h-fit w-32">
+                    <span className="h-fit w-32 2xl:w-12">
                       <img
                         src={service.img}
                         alt={service.title}

@@ -16,18 +16,18 @@ const About = () => {
     <div className="relative flex w-dvw flex-col items-center">
       <Navbar />
       {/* Cover image */}
-      <div className="relative flex h-[70dvh] w-full items-center justify-center bg-gray-900 p-8">
+      <div className="relative flex h-[40dvh] w-full items-center justify-center bg-gray-900 p-8 lg:h-[70dvh]">
         <CoverImage />
 
         <div className="container z-10 flex h-full w-full items-center justify-center">
-          <h1 className="text-6xl font-semibold text-gray-50 drop-shadow-xl">
+          <h1 className="text-4xl font-semibold text-gray-50 drop-shadow-xl lg:text-6xl">
             {t("about.title")}
           </h1>
         </div>
       </div>
 
       {/* ABOUT US */}
-      <div className="container flex w-full flex-col gap-8 p-4 py-32 md:min-h-screen md:flex-row md:justify-center md:gap-0 md:pb-52">
+      <div className="md:min-h-auto container flex w-full flex-col gap-8 p-4 pb-28 pt-16 md:flex-row md:justify-center md:gap-0 md:pb-52 md:pt-32">
         <div className="flex h-full flex-col md:w-3/5">
           {/* subtitle */}
           <span className="text-md uppercase text-red-600">
@@ -81,15 +81,15 @@ const About = () => {
       </div>
 
       {/* MORE */}
-      <div className="container p-4 md:p-0 md:pb-52">
-        <div className="relative flex w-full flex-col items-center justify-center gap-8 overflow-hidden rounded-2xl bg-stone-950 py-12 md:h-64 md:p-0">
+      <div className="container p-8 md:p-4 md:pb-52">
+        <div className="relative flex w-full flex-col items-center justify-center gap-8 overflow-hidden rounded-2xl bg-stone-950 py-12 md:h-64">
           <img
             src="/assets/cta.webp"
             alt="Contact background"
             className="absolute z-0 aspect-auto h-full w-full object-cover opacity-10"
           />
 
-          <h1 className="text-2xl text-gray-50">
+          <h1 className="text-center text-2xl text-gray-50">
             {t("about.evolutionTitle")}
           </h1>
 
@@ -97,9 +97,7 @@ const About = () => {
             <div className="flex flex-col items-center justify-between">
               <span className="mb-4 h-12 w-12 rounded-full bg-gray-50"></span>
               <span className="text-md text-gray-50">2015</span>
-              <p className="text-sm text-gray-50">
-                {t("about.evolution2015")}
-              </p>
+              <p className="text-sm text-gray-50 text-center">{t("about.evolution2015")}</p>
             </div>
 
             <span className="mt-6 hidden h-1 w-32 rounded-full bg-gray-400 md:block"></span>
@@ -107,27 +105,21 @@ const About = () => {
             <div className="flex flex-col items-center justify-between">
               <span className="mb-4 h-12 w-12 rounded-full bg-gray-50"></span>
               <span className="text-md text-gray-50">2017</span>
-              <p className="text-sm text-gray-50">
-                {t("about.evolution2017")}
-              </p>
+              <p className="text-sm text-gray-50 text-center">{t("about.evolution2017")}</p>
             </div>
             <span className="mt-6 hidden h-1 w-32 rounded-full bg-gray-400 md:block"></span>
 
             <div className="flex flex-col items-center justify-between">
               <span className="mb-4 h-12 w-12 rounded-full bg-gray-50"></span>
               <span className="text-md text-gray-50">2019</span>
-              <p className="text-sm text-gray-50">
-                {t("about.evolution2019")}
-              </p>
+              <p className="text-sm text-gray-50 text-center">{t("about.evolution2019")}</p>
             </div>
             <span className="mt-6 hidden h-1 w-32 rounded-full bg-gray-400 md:block"></span>
 
             <div className="flex flex-col items-center justify-between">
               <span className="mb-4 h-12 w-12 rounded-full bg-gray-50"></span>
               <span className="text-md text-gray-50">2021</span>
-              <p className="text-sm text-gray-50">
-                {t("about.evolution2021")}
-              </p>
+              <p className="text-sm text-gray-50 text-center">{t("about.evolution2021")}</p>
             </div>
           </div>
         </div>

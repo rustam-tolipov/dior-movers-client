@@ -32,17 +32,17 @@ const Services = () => {
     <div className="relative flex w-dvw flex-col items-center">
       <Navbar />
       {/* Cover image */}
-      <div className="relative flex w-full items-center justify-center bg-gray-900 md:h-[70dvh]">
+      <div className="relative flex w-full items-center justify-center bg-gray-900">
         <CoverImage />
 
-        <div className="container z-10 flex h-full w-full flex-col gap-8 overflow-hidden md:flex-row md:gap-0">
+        <div className="container z-10 md:min-h-72 md:items-center xl:items-start xl:py-12 lg:p-8 flex h-full w-full flex-col gap-8 overflow-hidden md:flex-row md:gap-0">
           <motion.div
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex h-full items-center justify-center py-20 md:w-3/5 md:py-0"
+            className="flex h-full items-center justify-center py-20 text-center md:py-0 lg:w-3/5 lg:text-start"
           >
-            <h1 className="text-center text-3xl font-bold text-gray-50 drop-shadow-xl md:text-start md:text-6xl">
+            <h1 className="text-center text-3xl font-bold text-gray-50 drop-shadow-xl lg:text-start md:text-6xl">
               {getCoverText()}
             </h1>
           </motion.div>
@@ -50,7 +50,7 @@ const Services = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="hidden h-full justify-center p-8 md:flex md:w-2/5 md:pr-8"
+            className="hidden h-full justify-center px-8 md:w-2/5 lg:flex"
           >
             <ContactForm />
           </motion.div>

@@ -41,14 +41,13 @@ const ContactForm = () => {
         phone: "+998",
         message: "",
       });
-      // You can add your form submission logic here
     }
   };
 
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex h-fit flex-col gap-4 rounded-lg bg-gray-50 p-6 shadow-md md:w-4/5 md:gap-6"
+      className="flex h-fit w-full max-w-96 flex-col gap-4 rounded-lg bg-gray-50 p-6 shadow-md xl:gap-6"
     >
       <div className="">
         <label className="block text-sm text-gray-700" htmlFor="name">

@@ -16,18 +16,18 @@ const Contact = () => {
     <div className="relative flex w-dvw flex-col items-center bg-gray-100">
       <Navbar />
       {/* Cover image */}
-      <div className="relative flex h-32 w-full items-center justify-center bg-gray-900 p-8 lg:h-64">
+      <div className="relative flex h-[40dvh] w-full items-center justify-center bg-gray-900 p-8 lg:h-[70dvh]">
         <CoverImage />
 
         <div className="container z-10 flex h-full w-full items-center justify-center">
-          <h1 className="text-3xl font-semibold text-gray-50 drop-shadow-xl lg:text-6xl">
+          <h1 className="text-4xl text-center font-semibold text-gray-50 drop-shadow-xl lg:text-6xl">
             {t("contactPage.title")}
           </h1>
         </div>
       </div>
 
       {/* CONTACT US */}
-      <div className="container flex w-full flex-col gap-8 px-8 py-12 md:min-h-screen md:flex-row md:justify-center md:gap-0 md:pb-52 md:pt-32">
+      <div className="container flex w-full flex-col gap-8 px-8 py-12 md:min-h-auto md:flex-row md:justify-center md:gap-0 md:pb-52 md:pt-32">
         <div className="flex h-full flex-col md:w-3/5">
           <span className="text-md uppercase text-red-600">
             {t("contactPage.subtitle")}
@@ -42,7 +42,7 @@ const Contact = () => {
             {t("contactPage.paragraph2")}
           </p>
         </div>
-        <div className="flex h-fit flex-col md:w-6/12">
+        <div className="flex h-fit flex-col md:w-4/12">
           <ContactForm />
         </div>
       </div>

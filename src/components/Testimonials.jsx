@@ -46,9 +46,12 @@ const Testimonials = () => {
             {t("testimonials.title")}
           </h1>
         </div>
-        <div className="grid h-full gap-16 p-10 md:grid-cols-2 lg:w-3/5">
+        <div className="grid h-full gap-16 p-10 lg:w-3/5 md:grid-cols-2">
           {testimonialsData.map((testimonial, index) => (
-            <div key={index} className="flex h-full w-full flex-col justify-between gap-4">
+            <div
+              key={index}
+              className="flex h-full w-full flex-col justify-between gap-4"
+            >
               {/* img */}
               <img
                 src={testimonial.imgSrc}

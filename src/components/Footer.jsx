@@ -73,7 +73,7 @@ const Footer = () => {
             transition={{
               duration: 0.1,
             }}
-            className="mb-6 mt-6 w-fit rounded-full bg-gray-950 px-3 py-1 text-sm font-medium text-gray-100 transition-all duration-200 hover:bg-red-800 active:scale-95 lg:mt-8 lg:px-6 lg:py-2 lg:text-base"
+            className="mb-6 mt-6 w-fit rounded-full bg-gray-950 text-sm font-medium text-gray-100 transition-all duration-200 hover:bg-red-800 active:scale-95 lg:mt-8 px-6 py-2 lg:text-base"
           >
             <Link to="/contact">{t("footer.bookMove")}</Link>
           </motion.div>

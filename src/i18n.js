@@ -285,14 +285,23 @@ const resources = {
       testimonials: {
         title: "Mijozlarimizning fikrlarini ko‘ring",
         review1: {
-          text: "Bizning xizmatlarimizdan foydalanib, mijozlarimiz o‘zlarining ko‘chish jarayonlarini juda qulay deb topishdi.",
+          text: "Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum.",
           name: "- Lee Sims",
         },
         review2: {
-          text: "Xizmatlardan juda mamnunman! Tezkor va professional jamoa.",
+          text: "Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum.",
           name: "- Jane Doe",
         },
+        review3: {
+          text: "Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum.",
+          name: "- John Smith",
+        },
+        review4: {
+          text: "Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum.",
+          name: "- Emily Johnson",
+        },
       },
+
       infoComponent: {
         reliableService: "Ishonchli xizmat, ajoyib natijalar",
         whyChooseUs: "Nega bizni tanlaysiz?",
@@ -344,7 +353,7 @@ const resources = {
       },
       contactComponent: {
         title: "Bugun biz bilan bog'laning!",
-        button: "Narxni hisoblash va bron qilish",
+        button: "Bron qilish",
       },
       servicesPage: {
         title: "Bizning Xizmatlarimiz",
@@ -510,8 +519,20 @@ const resources = {
       testimonials: {
         title: "Отзывы наших клиентов",
         review1: {
-          text: "Очень доволен услугами! Все было сделано быстро и профессионально.",
-          name: "- Ли Симс",
+          text: "Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum.",
+          name: "- Lee Sims",
+        },
+        review2: {
+          text: "Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum.",
+          name: "- Jane Doe",
+        },
+        review3: {
+          text: "Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum.",
+          name: "- John Smith",
+        },
+        review4: {
+          text: "Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum.",
+          name: "- Emily Johnson",
         },
       },
       infoComponent: {
@@ -535,37 +556,38 @@ const resources = {
         },
       },
       faq: {
-        title: "Savollaringiz bormi? Bizda javoblar bor!",
-        subtitle: "Ko‘p beriladigan savollar",
+        title: "Есть вопросы? У нас есть ответы!",
+        subtitle: "Часто задаваемые вопросы",
         question1: {
-          question: "Ko‘chirish xizmatini qanday buyurtma qilishim mumkin?",
+          question: "Как заказать услугу переезда?",
           answer:
-            "Xizmatimizni onlayn yoki telefon orqali osongina buyurtma qilishingiz mumkin. Sizga qulay vaqtni tanlab, jadvalga kiritamiz!",
+            "Вы можете легко заказать наши услуги онлайн или по телефону. Мы подберем удобное для вас время!",
         },
         question2: {
-          question: "Qaysi hududlarga xizmat ko‘rsatasiz?",
+          question: "Какие районы вы обслуживаете?",
           answer:
-            "Biz barcha yirik shaharlarga va ularning atrofidagi hududlarga xizmat ko‘rsatamiz. Hududingiz qamrab olinganligini tasdiqlash uchun biz bilan bog‘laning.",
+            "Мы работаем в крупных городах и прилегающих районах. Свяжитесь с нами, чтобы уточнить, обслуживаем ли мы ваш район.",
         },
         question3: {
-          question: "Siz qadoqlash xizmatlarini taklif qilasizmi?",
+          question: "Вы предоставляете услуги упаковки?",
           answer:
-            "Ha, biz sizning buyumlaringiz xavfsiz qadoqlanishi va tashilishi uchun professional qadoqlash xizmatlarini taklif qilamiz.",
+            "Да, мы предлагаем профессиональные услуги упаковки, чтобы обеспечить безопасную транспортировку ваших вещей.",
         },
         question4: {
-          question: "Qaysi buyumlarni tashimaysiz?",
+          question: "Есть ли вещи, которые вы не перевозите?",
           answer:
-            "Biz xavfli materiallar, tez buziladigan mahsulotlar yoki noqonuniy tashish taqiqlangan narsalarni tashimaymiz. Cheklangan buyumlarning to‘liq ro‘yxati uchun biz bilan bog‘laning.",
+            "Мы не перевозим опасные материалы, скоропортящиеся товары и предметы, запрещенные к транспортировке. Свяжитесь с нами, чтобы получить полный список ограниченных предметов.",
         },
         question5: {
-          question: "Ko‘chishga qanday tayyorgarlik ko‘rishim kerak?",
+          question: "Как подготовиться к переезду?",
           answer:
-            "Buyumlaringiz ro‘yxatini tuzishni, qutilarni belgilashni va barcha narsalarni xavfsiz joylashtirishni tavsiya qilamiz. Bizning jamoamiz qo‘shimcha maslahatlar va yordam berishi mumkin.",
+            "Мы рекомендуем составить список вещей, маркировать коробки и убедиться, что все надежно упаковано. Наша команда может дать дополнительные советы и помочь вам.",
         },
       },
+
       contactComponent: {
         title: "Свяжитесь с нами сегодня!",
-        button: "Рассчитать цену и забронировать",
+        button: "забронировать",
       },
       servicesPage: {
         title: "Наши Услуги",
@@ -684,8 +706,8 @@ const resources = {
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: "en", // Default language
-  fallbackLng: "en", // Fallback language
+  lng: "uz", // Default language
+  fallbackLng: "uz", // Fallback language
   interpolation: {
     escapeValue: false, // React already escapes values
   },
