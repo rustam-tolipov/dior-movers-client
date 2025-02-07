@@ -8,7 +8,7 @@ const MyImage = ({ alt, src, design }) => {
       alt={alt}
       effect="blur"
       wrapperProps={{
-        style: { transitionDelay: "1s" },
+        style: { transitionDelay: "0.1s" },
       }}
       className={design}
       src={src}
