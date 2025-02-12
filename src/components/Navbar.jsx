@@ -65,7 +65,7 @@ const Navbar = () => {
   return (
     <div className="flex h-fit w-full items-center justify-center bg-red-600 md:px-4">
       <div className="container flex h-fit w-full flex-row items-center justify-between p-4 md:px-0 md:py-6">
-        <div className="flex w-4/5 items-center justify-between md:w-2/5">
+        <div className="flex w-4/5 items-center justify-between md:w-max gap-8 xl:gap-32">
           <Link to="/" className="cursor-pointer">
             <img
               src="/logo.svg"
@@ -80,7 +80,7 @@ const Navbar = () => {
                 className={`group flex h-8 w-8 cursor-pointer items-center justify-center overflow-hidden rounded-full 
                     border-2 shadow-md transition-all duration-200 hover:scale-110 
                     active:scale-95 md:h-11 md:w-11 
-                    ${i18n.language === code ? "border-white border-4 shadow-lg" : "opacity-80"}`}
+                    ${i18n.language === code ? "border-4 border-white shadow-lg" : "opacity-80"}`}
                 onClick={() => handleLangChange(code)}
               >
                 <img
@@ -255,7 +255,7 @@ const Navbar = () => {
                   animate={{ opacity: 1, rotateZ: 0 }}
                   transition={{ delay: 0.1 }}
                   exit={{ opacity: 0, transition: { delay: 0 } }}
-                  className="bg-black flex items-center justify-center rounded-full lg:hidden"
+                  className="flex items-center justify-center rounded-full bg-black lg:hidden"
                 >
                   <FaXmark className="m-1 text-2xl text-white" />
                 </motion.div>
