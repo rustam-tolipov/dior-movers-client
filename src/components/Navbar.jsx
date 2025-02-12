@@ -17,6 +17,10 @@ const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const [openServices, setOpenServices] = useState(false);
 
+  const handleLangChange = (lang) => {
+    i18n.changeLanguage(lang);
+  };
+
   const handleToggleMenu = () => setOpenMenu(!openMenu);
   const handleToggleServices = () => setOpenServices(!openServices);
 
@@ -52,48 +56,42 @@ const Navbar = () => {
     { href: "https://www.facebook.com", icon: <FaFacebook /> },
   ];
 
+  const languages = [
+    { code: "uz", flag: "/assets/flags/uz.png", alt: "Uzbek Flag" },
+    { code: "ru", flag: "/assets/flags/ru.png", alt: "Russian Flag" },
+    { code: "en", flag: "/assets/flags/us.png", alt: "English Flag" },
+  ];
+
   return (
     <div className="flex h-fit w-full items-center justify-center bg-red-600 px-4">
       <div className="container flex h-fit w-full flex-row items-center justify-between p-4 md:px-0 md:py-6">
-        <Link to="/" className="cursor-pointer">
-          <img
-            src="/logo.svg"
-            alt="Logo"
-            className="aspect-auto h-12 w-fit max-w-[6rem]"
-          />
-        </Link>
-        <ul className="flex items-center gap-2 md:gap-3">
-          <li
-            className="flex h-8 w-8 cursor-pointer items-center justify-center overflow-hidden rounded-full border-2 transition-all duration-200 hover:scale-110 md:h-10 md:w-10"
-            onClick={() => i18n.changeLanguage("uz")}
-          >
+        <div className="flex w-4/5 items-center justify-between md:w-2/5">
+          <Link to="/" className="cursor-pointer">
             <img
-              src={`/assets/flags/uz.png`}
-              alt="Language image"
-              className="aspect-square size-auto"
+              src="/logo.svg"
+              alt="Logo"
+              className="aspect-auto h-12 w-fit max-w-[6rem]"
             />
-          </li>
-          <li
-            className="flex h-8 w-8 cursor-pointer items-center justify-center overflow-hidden rounded-full border-2 transition-all duration-200 hover:scale-110 md:h-10 md:w-10"
-            onClick={() => i18n.changeLanguage("ru")}
-          >
-            <img
-              src={`/assets/flags/ru.png`}
-              alt="Language image"
-              className="aspect-square size-auto"
-            />
-          </li>
-          <li
-            className="flex h-8 w-8 cursor-pointer items-center justify-center overflow-hidden rounded-full border-2 transition-all duration-200 hover:scale-110 md:h-10 md:w-10"
-            onClick={() => i18n.changeLanguage("en")}
-          >
-            <img
-              src={`/assets/flags/us.png`}
-              alt="Language image"
-              className="aspect-square size-auto"
-            />
-          </li>
-        </ul>
+          </Link>
+          <ul className="flex items-center gap-2 md:gap-3">
+            {languages.map(({ code, flag, alt }) => (
+              <li
+                key={code}
+                className={`group flex h-9 w-9 cursor-pointer items-center justify-center overflow-hidden rounded-full 
+                    border-2 shadow-md transition-all duration-200 hover:scale-110 
+                    active:scale-95 md:h-11 md:w-11 
+                    ${i18n.language === code ? "border-white border-4 shadow-lg" : "opacity-80"}`}
+                onClick={() => handleLangChange(code)}
+              >
+                <img
+                  src={flag}
+                  alt={alt}
+                  className="h-full w-full object-cover group-hover:opacity-100"
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
         <nav className="hidden items-center gap-10 lg:flex">
           {navLinks.map((link, index) => (
             <Link
@@ -250,16 +248,16 @@ const Navbar = () => {
               </div>
               <span
                 onClick={handleToggleMenu}
-                className="absolute right-6 top-7"
+                className="absolute right-5 top-6"
               >
                 <motion.div
                   initial={{ opacity: 0, rotateZ: -90 }}
                   animate={{ opacity: 1, rotateZ: 0 }}
                   transition={{ delay: 0.1 }}
                   exit={{ opacity: 0, transition: { delay: 0 } }}
-                  className="h-18 flex items-center justify-center rounded lg:hidden"
+                  className="bg-black flex items-center justify-center rounded-full lg:hidden"
                 >
-                  <FaXmark className="rounded bg-black text-2xl text-white" />
+                  <FaXmark className="m-1 text-2xl text-white" />
                 </motion.div>
               </span>
             </motion.div>

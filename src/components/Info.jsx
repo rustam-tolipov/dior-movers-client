@@ -24,7 +24,7 @@ const Reason = ({ imgSrc, title, description }) => (
       className="md:h-18 h-14 object-contain lg:h-20 2xl:h-32"
     />
     <div className="flex flex-col items-center gap-2 lg:gap-4">
-      <h3 className="text-lg font-semibold md:text-2xl">{title}</h3>
+      <h3 className="text-lg text-center font-semibold md:text-2xl">{title}</h3>
       <p className="w-9/12 text-center text-sm tracking-wide md:text-lg">
         {description}
       </p>

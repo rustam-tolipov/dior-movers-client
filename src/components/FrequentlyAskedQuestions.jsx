@@ -16,12 +16,12 @@ const questions = [
     answer: "faq.question3.answer",
   },
   {
-    question: "faq.question4.question",
-    answer: "faq.question4.answer",
-  },
-  {
     question: "faq.question5.question",
     answer: "faq.question5.answer",
+  },
+  {
+    question: "faq.question4.question",
+    answer: "faq.question4.answer",
   },
 ];
 
@@ -73,7 +73,7 @@ const Item = ({ question, answer }) => {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <div className="z-10 flex w-full items-center justify-center gap-4 px-4 text-sm font-medium text-gray-900 md:h-16 md:px-8 md:text-base">
+            <div className="z-10 mt-2 flex w-full items-center justify-center gap-4 px-4 text-sm font-medium text-gray-900 md:h-16 md:px-8 md:text-base">
               <span className="min-h-10 w-1 rounded-full bg-gray-600"></span>
               {t(answer)}
             </div>
@@ -94,9 +94,7 @@ const FrequentlyAskedQuestions = () => {
           <p className="text-sm font-medium uppercase text-red-600 md:text-lg">
             {t("faq.title")}
           </p>
-          <h1 className="text-xl font-bold md:text-4xl">
-            {t("faq.subtitle")}
-          </h1>
+          <h1 className="text-xl font-bold md:text-4xl">{t("faq.subtitle")}</h1>
         </div>
         <div className="flex w-full flex-col gap-2 lg:w-8/12">
           {questions.map((question, index) => (

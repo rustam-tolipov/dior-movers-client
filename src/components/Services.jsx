@@ -37,10 +37,10 @@ const ServiceSection = ({ title, description, imgSrc, reverse, to }) => {
       className={`flex h-fit w-full flex-col items-center justify-between gap-8 md:flex-row lg:gap-20 ${reverse ? "md:flex-row-reverse" : ""}`}
     >
       <div className="h-full max-h-72 w-full overflow-hidden md:w-1/2 lg:max-h-none">
-        <MyImage
+        <img
           src={imgSrc}
           alt={`${title} image`}
-          design="aspect-auto h-full object-cover object-center w-full"
+          className="aspect-auto h-full object-cover object-center w-full"
         />
       </div>
       <div className="w-full md:w-1/2">
@@ -65,7 +65,7 @@ const Services = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="container mx-auto flex h-fit flex-col gap-20 px-4 pb-28 pt-16 md:pb-56 md:pt-32 md:gap-32">
+    <div className="container mx-auto flex h-fit flex-col gap-20 px-4 pb-28 pt-16 md:gap-32 md:pb-56 md:pt-32">
       <div className="flex flex-col md:gap-2">
         <p className="text-sm font-medium uppercase text-red-600 md:text-lg">
           {t("servicesComponent.services")}

@@ -27,7 +27,7 @@ const Contact = () => {
       </div>
 
       {/* CONTACT US */}
-      <div className="container flex w-full flex-col gap-8 px-8 py-12 md:min-h-auto md:flex-row md:justify-center md:gap-0 md:pb-52 md:pt-32">
+      <div className="container flex w-full flex-col gap-8 px-8 py-12 md:min-h-auto md:flex-row md:justify-between md:gap-0 md:pb-52 md:pt-32">
         <div className="flex h-full flex-col md:w-3/5">
           <span className="text-md uppercase text-red-600">
             {t("contactPage.subtitle")}

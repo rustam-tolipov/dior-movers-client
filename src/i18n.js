@@ -53,19 +53,19 @@ const resources = {
       testimonials: {
         title: "See how our clients review about our services.",
         review1: {
-          text: "Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum.",
+          text: "Super smooth move! The team was fast, careful, and very professional.",
           name: "- Lee Sims",
         },
         review2: {
-          text: "Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum.",
+          text: "Excellent service! They handled everything with care, and the whole process was stress-free.",
           name: "- Jane Doe",
         },
         review3: {
-          text: "Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum.",
+          text: "Highly recommend! The movers were friendly, efficient, and very organized.",
           name: "- John Smith",
         },
         review4: {
-          text: "Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum.",
+          text: "Everything arrived safely, and the team was a pleasure to work with!",
           name: "- Emily Johnson",
         },
       },
@@ -89,32 +89,32 @@ const resources = {
         },
       },
       faq: {
-        title: "Savollaringiz bormi? Bizda javoblar bor!",
-        subtitle: "Ko‘p beriladigan savollar",
+        title: "Have Questions? We Have Answers!",
+        subtitle: "Frequently Asked Questions",
         question1: {
-          question: "Ko‘chirish xizmatini qanday buyurtma qilishim mumkin?",
+          question: "How can I book a moving service?",
           answer:
-            "Xizmatimizni onlayn yoki telefon orqali osongina buyurtma qilishingiz mumkin. Sizga qulay vaqtni tanlab, jadvalga kiritamiz!",
+            "You can easily book our service online or by phone. Choose a convenient time, and we’ll schedule it for you!",
         },
         question2: {
-          question: "Qaysi hududlarga xizmat ko‘rsatasiz?",
+          question: "Which areas do you serve?",
           answer:
-            "Biz barcha yirik shaharlarga va ularning atrofidagi hududlarga xizmat ko‘rsatamiz. Hududingiz qamrab olinganligini tasdiqlash uchun biz bilan bog‘laning.",
+            "We provide services in all major cities and surrounding areas. Contact us to confirm coverage in your location.",
         },
         question3: {
-          question: "Siz qadoqlash xizmatlarini taklif qilasizmi?",
+          question: "Do you offer packing services?",
           answer:
-            "Ha, biz sizning buyumlaringiz xavfsiz qadoqlanishi va tashilishi uchun professional qadoqlash xizmatlarini taklif qilamiz.",
+            "Yes, we offer professional packing services to ensure your belongings are safely packed and transported.",
         },
         question4: {
-          question: "Qaysi buyumlarni tashimaysiz?",
+          question: "What items do you not transport?",
           answer:
-            "Biz xavfli materiallar, tez buziladigan mahsulotlar yoki noqonuniy tashish taqiqlangan narsalarni tashimaymiz. Cheklangan buyumlarning to‘liq ro‘yxati uchun biz bilan bog‘laning.",
+            "We do not transport hazardous materials, perishable goods, or items prohibited by law. Contact us for a full list of restricted items.",
         },
         question5: {
-          question: "Ko‘chishga qanday tayyorgarlik ko‘rishim kerak?",
+          question: "How should I prepare for the move?",
           answer:
-            "Buyumlaringiz ro‘yxatini tuzishni, qutilarni belgilashni va barcha narsalarni xavfsiz joylashtirishni tavsiya qilamiz. Bizning jamoamiz qo‘shimcha maslahatlar va yordam berishi mumkin.",
+            "We recommend making an inventory of your belongings, labeling boxes, and ensuring everything is securely packed. Our team can provide additional tips and assistance.",
         },
       },
       contactComponent: {
@@ -135,7 +135,7 @@ const resources = {
       },
       footer: {
         description:
-          "Ducimus suscipit inventore non voluptas accusantium deleniti, corrupti impedit adipisci, maiores hic minima tenetur unde aliquam voluptate! Non, facilis accusamus?",
+          "We provide reliable, stress-free moving with care and professionalism.",
         bookMove: "Book a move",
         helpAndServices: "Help and services",
         toExplore: "To explore",
@@ -156,16 +156,16 @@ const resources = {
         subtitle: "Know Us Better",
         mainTitle: "We're hyper-focused on what we do best",
         paragraph1:
-          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, blanditiis possimus quia distinctio labore architecto. Vel saepe et culpa eum sit natus accusantium amet ullam laboriosam eos, dolorem animi qui. Opsum dolor sit, amet consectetur adipisicing elit. Sapiente officia id ipsam error beatae libero, ipsum corrupti dolor deserunt ullam. Ratione iure dolorum quae amet quas eos rem recusandae esse.",
+          "At Our Company, we specialize in seamless, stress-free moving experiences. With a deep understanding of what makes a move successful, we bring efficiency, care, and reliability to every job—whether it's a local move, long-distance relocation, or commercial transition.",
         paragraph2:
-          "Vel saepe et culpa eum sit natus accusantium amet ullam laboriosam eos, dolorem animi qui. Opsum dolor sit, amet consectetur adipisicing elit. Sapiente officia id ipsam error beatae libero, ipsum corrupti dolor deserunt ullam. Ratione iure dolorum quae amet quas eos rem recusandae esse.",
+          "Our team is committed to handling your belongings with the utmost care, ensuring they arrive safely and on time. From packing and loading to transportation and unpacking, we streamline the process so you can focus on settling into your new space.",
         contactButton: "Contact Us",
         missionTitle: "Our Mission",
         missionDescription:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero iure iusto pariatur, ab dolorum natus officiis nobis nesciunt dolore magni voluptas, iste neque corporis excepturi ratione facilis fugiat at aspernatur?",
+          "We ensure stress-free moves with professionalism and care, making every transition smooth and secure.",
         visionTitle: "Our Vision",
         visionDescription:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero iure iusto pariatur, ab dolorum natus officiis nobis nesciunt dolore magni voluptas, iste neque corporis excepturi ratione facilis fugiat at aspernatur?",
+          "We aim to make moving effortless and accessible for all through innovation and reliability.",
         evolutionTitle: "A Company Evolution",
         evolution2015: "Company Founded",
         evolution2017: "First Major Project",
@@ -241,7 +241,7 @@ const resources = {
         about: "Biz haqimizda",
         contact: "Bog‘lanish",
         services: "Xizmatlar",
-        learnMore: "Ko'proq bilish",
+        learnMore: "Ma'lumot olish",
         getQuote: "Narxni bilish",
         servicesInfo: {
           moving: {
@@ -283,25 +283,25 @@ const resources = {
         },
       },
       testimonials: {
-        title: "Mijozlarimizning fikrlarini ko‘ring",
+        title:
+          "Mijozlarimiz biz haqimizda.",
         review1: {
-          text: "Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum.",
+          text: "Juda silliq ko‘chish! Jamoa tez, ehtiyotkor va juda professional edi.",
           name: "- Lee Sims",
         },
         review2: {
-          text: "Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum.",
+          text: "Ajoyib xizmat! Ular hamma narsani ehtiyotkorlik bilan bajardilar, butun jarayon hech qanday stresssiz o‘tdi.",
           name: "- Jane Doe",
         },
         review3: {
-          text: "Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum.",
+          text: "Tavsiya qilaman! Ko‘chirish jamoasi samimiy, tezkor va juda tartibli edi.",
           name: "- John Smith",
         },
         review4: {
-          text: "Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum.",
+          text: "Hamma narsa xavfsiz yetib keldi va jamoa bilan ishlash juda yoqimli bo‘ldi!",
           name: "- Emily Johnson",
         },
       },
-
       infoComponent: {
         reliableService: "Ishonchli xizmat, ajoyib natijalar",
         whyChooseUs: "Nega bizni tanlaysiz?",
@@ -352,7 +352,7 @@ const resources = {
         },
       },
       contactComponent: {
-        title: "Bugun biz bilan bog'laning!",
+        title: "Bugunoq biz bilan bog'laning!",
         button: "Bron qilish",
       },
       servicesPage: {
@@ -369,7 +369,7 @@ const resources = {
       },
       footer: {
         description:
-          "Ducimus suscipit inventore non voluptas accusantium deleniti, corrupti impedit adipisci, maiores hic minima tenetur unde aliquam voluptate! Non, facilis accusamus?",
+          "Biz ishonchli, stresssiz ko‘chirish xizmatini e'tibor va professionallik bilan taqdim etamiz.",
         bookMove: "Ko‘chirishni bron qiling",
         helpAndServices: "Yordam va xizmatlar",
         toExplore: "Ko‘rib chiqish",
@@ -390,16 +390,16 @@ const resources = {
         subtitle: "Bizni Yaxshiroq Bilib Oling",
         mainTitle: "Biz o‘z ishimizga diqqat bilan yondashamiz",
         paragraph1:
-          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, blanditiis possimus quia distinctio labore architecto. Vel saepe et culpa eum sit natus accusantium amet ullam laboriosam eos, dolorem animi qui.",
+          "Bizning kompaniyamiz muammosiz va stresssiz ko‘chirish xizmatlariga ixtisoslashgan. Ko‘chish muvaffaqiyatli bo‘lishi uchun zarur bo‘lgan barcha jihatlarni chuqur tushunib, har bir ishda samaradorlik, e’tibor va ishonchlilikni ta’minlaymiz—mahalliy ko‘chish, uzoq masofali ko‘chish yoki tijorat ko‘chish bo‘lishidan qat'i nazar.",
         paragraph2:
-          "Vel saepe et culpa eum sit natus accusantium amet ullam laboriosam eos, dolorem animi qui.",
+          "Jamoamiz sizning buyumlaringizni katta ehtiyotkorlik bilan tashish, ularning xavfsiz va o‘z vaqtida yetib borishini ta’minlashga sodiqdir. Qadoqlash va yuklashdan tortib, tashish va joyiga qo‘yishgacha bo‘lgan jarayonni soddalashtiramiz, shunda siz yangi joyga moslashishga e’tibor qaratishingiz mumkin.",
         contactButton: "Biz bilan bog‘laning",
         missionTitle: "Bizning Missiyamiz",
         missionDescription:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero iure iusto pariatur.",
+          "Biz professionallik va g‘amxo‘rlik bilan stresssiz ko‘chishni ta’minlaymiz.",
         visionTitle: "Bizning Vizyonimiz",
         visionDescription:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero iure iusto pariatur.",
+          "Biz ko‘chishni oson va hammaga qulay qilishga intilamiz.",
         evolutionTitle: "Kompaniyaning Rivojlanishi",
         evolution2015: "Kompaniya Tashkil Etildi",
         evolution2017: "Birinchi Katta Loyiha",
@@ -517,21 +517,21 @@ const resources = {
         },
       },
       testimonials: {
-        title: "Отзывы наших клиентов",
+        title: "Посмотрите, что наши клиенты говорят о наших услугах.",
         review1: {
-          text: "Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum.",
+          text: "Переезд прошел гладко! Команда работала быстро, аккуратно и профессионально.",
           name: "- Lee Sims",
         },
         review2: {
-          text: "Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum.",
+          text: "Отличный сервис! Они с заботой отнеслись ко всему, и весь процесс прошел без стресса.",
           name: "- Jane Doe",
         },
         review3: {
-          text: "Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum.",
+          text: "Очень рекомендую! Грузчики были дружелюбными, оперативными и хорошо организованными.",
           name: "- John Smith",
         },
         review4: {
-          text: "Nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum.",
+          text: "Все прибыло в целости, и работать с командой было приятно!",
           name: "- Emily Johnson",
         },
       },
@@ -603,7 +603,7 @@ const resources = {
       },
       footer: {
         description:
-          "Ducimus suscipit inventore non voluptas accusantium deleniti, corrupti impedit adipisci, maiores hic minima tenetur unde aliquam voluptate! Non, facilis accusamus?",
+          "Мы предоставляем надежный и безстрессовый переезд с заботой и профессионализмом.",
         bookMove: "Забронировать переезд",
         helpAndServices: "Помощь и услуги",
         toExplore: "Исследовать",
@@ -624,16 +624,16 @@ const resources = {
         subtitle: "Узнайте о нас больше",
         mainTitle: "Мы полностью сосредоточены на том, что делаем лучше всего",
         paragraph1:
-          "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, blanditiis possimus quia distinctio labore architecto. Vel saepe et culpa eum sit natus accusantium amet ullam laboriosam eos, dolorem animi qui.",
+          "В нашей компании мы специализируемся на плавных и безстрессовых переездах. Глубоко понимая, что делает переезд успешным, мы обеспечиваем эффективность, заботу и надежность в каждом заказе — будь то местный переезд, междугородний или коммерческий.",
         paragraph2:
-          "Vel saepe et culpa eum sit natus accusantium amet ullam laboriosam eos, dolorem animi qui.",
+          "Наша команда стремится обращаться с вашими вещами максимально бережно, гарантируя их безопасную и своевременную доставку. От упаковки и погрузки до перевозки и распаковки — мы упрощаем процесс, чтобы вы могли сосредоточиться на обустройстве в новом месте.",
         contactButton: "Свяжитесь с нами",
-        missionTitle: "Наша Миссия",
+        missionTitle: "Наша миссия",
         missionDescription:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero iure iusto pariatur.",
-        visionTitle: "Наше Видение",
+          "Мы обеспечиваем безстрессовый переезд с заботой и профессионализмом.",
+        visionTitle: "Наше видение",
         visionDescription:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero iure iusto pariatur.",
+          "Мы стремимся сделать переезд легким и доступным для всех.",
         evolutionTitle: "Развитие Компании",
         evolution2015: "Основание Компании",
         evolution2017: "Первый Крупный Проект",
