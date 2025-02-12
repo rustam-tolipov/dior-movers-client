@@ -63,7 +63,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="flex h-fit w-full items-center justify-center bg-red-600 px-4">
+    <div className="flex h-fit w-full items-center justify-center bg-red-600 md:px-4">
       <div className="container flex h-fit w-full flex-row items-center justify-between p-4 md:px-0 md:py-6">
         <div className="flex w-4/5 items-center justify-between md:w-2/5">
           <Link to="/" className="cursor-pointer">
@@ -73,11 +73,11 @@ const Navbar = () => {
               className="aspect-auto h-12 w-fit max-w-[6rem]"
             />
           </Link>
-          <ul className="flex items-center gap-2 md:gap-3">
+          <ul className="flex items-center gap-3 md:gap-3">
             {languages.map(({ code, flag, alt }) => (
               <li
                 key={code}
-                className={`group flex h-9 w-9 cursor-pointer items-center justify-center overflow-hidden rounded-full 
+                className={`group flex h-8 w-8 cursor-pointer items-center justify-center overflow-hidden rounded-full 
                     border-2 shadow-md transition-all duration-200 hover:scale-110 
                     active:scale-95 md:h-11 md:w-11 
                     ${i18n.language === code ? "border-white border-4 shadow-lg" : "opacity-80"}`}
@@ -158,7 +158,7 @@ const Navbar = () => {
           )}
         </AnimatePresence>
         <FaBars
-          className={`text-2xl lg:hidden ${openMenu && "invisible"}`}
+          className={`text-3xl lg:hidden ${openMenu && "invisible"}`}
           onClick={handleToggleMenu}
         />
         <AnimatePresence>
@@ -248,7 +248,7 @@ const Navbar = () => {
               </div>
               <span
                 onClick={handleToggleMenu}
-                className="absolute right-5 top-6"
+                className="absolute right-4 top-6"
               >
                 <motion.div
                   initial={{ opacity: 0, rotateZ: -90 }}
