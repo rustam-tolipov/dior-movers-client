@@ -20,7 +20,7 @@ const Main = () => {
       bgColor: "bg-red-50",
       textColor: "text-gray-900",
       hoverOutline: "hover:bg-gray-200",
-      location: "/services",
+      location: "/about",
     },
   ];
 

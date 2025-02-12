@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 const Contact = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const handleClick = () => navigate("/about");
+  const handleClick = () => navigate("/contact");
 
   return (
     <div className="container mx-auto px-4 py-20 lg:px-12 lg:pb-52 lg:pt-32">
